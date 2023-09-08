@@ -1,95 +1,23 @@
-.darkmode {
-  display: flex;
-  height: 500px;
-  width: 500px;
-  flex-wrap: wrap;
-
-  img {
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    margin-top: 80px;
-    margin-left: 190px;
-    filter: invert(94%) sepia(81%) saturate(25%) hue-rotate(157deg) brightness(110%) contrast(91%);
-  }
-
-}
-.brightmode {
-  display: flex;
-  height: 500px;
-  width: 500px;
-  flex-wrap: wrap;
-  img {
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    margin-top: 90px;
-    margin-left: 190px;
-  }
+.darkmode-background-color {
+  color: #090a0a; // normal Text color + background darkmode
 }
 
-.sample {
-  width: 200px;
-  height: 50px;
+.default-background-color {
+  color: #F4F4F4; //bright hintergrund und dark text
 }
 
-.vector {
-  height: 3px;
-  width: 3px;
-  border-radius: 50%;
-  margin: 15px;
-}
-
-.color1 {
-  background-color: #090a0a;
-}
-.color2 {
-  background-color: #7a7d7d;
-}
-.color3 {
-  background-color: #77867f;
-}
-.color4 {
-  background-color: #bf0603;
-}
-
-.color6 {
+.spec-text-color {
   color: #9A031E; // fav color special text
 }
-.color7 {
-  color: #823038;
+
+.vector-color {
+  color: #7a7d7d; // vector color
 }
 
 .color8 {
   color: #E7E5DF; // maybe background color brightmode
 }
 
-.text-color3 {
-  position: absolute;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  margin-top: 200px;
-  margin-left: 105px;
-  font-size: 27px;
-  color: #9A031E;
-}
-
-.text-color1 {
-  position: absolute;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  margin-top: 250px;
-  margin-left: 105px;
-  font-size: 27px;
-  color: #090a0a;
-}
-
-.text-color2 {
-  position: absolute;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  margin-top: 250px;
-  margin-left: 105px;
-  font-size: 27px;
-  color: #F4F4F4;
-}
-.color6 {
-  background-color: #F4F4F4;
+.thingsINeddLAter {
+  writing-mode: vertical-rl;
 }
