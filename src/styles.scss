@@ -1,27 +1,6 @@
 @font-face {
-  font-family: 'overpass';
-  src: url("/assets/fonts/Overpass-VariableFont_wght.ttf") format("truetype");
-} //normale Schriftart für Text
-
-@font-face {
-  font-family: 'rubik';
-  src: url("/assets/fonts/RubikMonoOne-Regular.ttf") format("truetype");
-} //maximal  überschriften
-
-@font-face {
-  font-family: 'expletus';
-  src: url("/assets/fonts/ExpletusSans-VariableFont_wght.ttf") format("truetype");
-} // sieht im Fließtext schwierig aus
-
-@font-face {
   font-family: 'genos';
   src: url("/assets/fonts/Genos-VariableFont_wght.ttf") format("truetype");
-} // sieht im Fließtext schwierig aus
-
-
-@font-face {
-  font-family: 'orbitron';
-  src: url("/assets/fonts/Orbitron-VariableFont_wght.ttf") format("truetype");
 } // sieht im Fließtext schwierig aus
 
 @font-face {
@@ -33,16 +12,36 @@ body {
   margin: 0;
   background-color: #f4f4f4;
   font-family: 'overpass', sans-serif;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 html {
   scroll-behavior: smooth;
-  // pointer-events: none;
 }
 
-h1 {
-  color: #090a0a;
+h1, h2 {
+  margin: 0;
+  
   font-family: 'tektur', sans-serif;
+  cursor: default;
+  background-color: #f4f4f4;
+}
+
+p {
+  font-family: 'genos', sans-serif;
+  color: #090a0a;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  line-height: 100%;
+  margin: 0;
+  font-size: 21px;
+  pointer-events: none;
+  background-color: #f4f4f4;
+  
+
 }
 
 ::-webkit-scrollbar {
