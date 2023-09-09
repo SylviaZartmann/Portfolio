@@ -1,13 +1,75 @@
+@font-face {
+  font-family: 'overpass';
+  src: url("/assets/fonts/Overpass-VariableFont_wght.ttf") format("truetype");
+} //normale Schriftart für Text
+
+@font-face {
+  font-family: 'rubik';
+  src: url("/assets/fonts/RubikMonoOne-Regular.ttf") format("truetype");
+} //maximal  überschriften
+
+@font-face {
+  font-family: 'expletus';
+  src: url("/assets/fonts/ExpletusSans-VariableFont_wght.ttf") format("truetype");
+} // sieht im Fließtext schwierig aus
+
+@font-face {
+  font-family: 'genos';
+  src: url("/assets/fonts/Genos-VariableFont_wght.ttf") format("truetype");
+} // sieht im Fließtext schwierig aus
+
+
+@font-face {
+  font-family: 'orbitron';
+  src: url("/assets/fonts/Orbitron-VariableFont_wght.ttf") format("truetype");
+} // sieht im Fließtext schwierig aus
+
+@font-face {
+  font-family: 'tektur';
+  src: url("/assets/fonts/Tektur-VariableFont_wdth,wght.ttf") format("truetype");
+}
+
 body {
-    margin: 0;
-    background-color: #F4F4F4;
+  margin: 0;
+  background-color: #f4f4f4;
+  font-family: 'overpass', sans-serif;
 }
 
 html {
-    scroll-behavior: smooth;
-    pointer-events: none;
+  scroll-behavior: smooth;
+  // pointer-events: none;
+}
+
+h1 {
+  color: #090a0a;
+  font-family: 'tektur', sans-serif;
 }
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
+}
+
+.darkmode-background-color {
+  //filter: invert(2%) sepia(4%) saturate(1127%) hue-rotate(131deg) brightness(97%) contrast(97%);
+  color: #090a0a; // normal Text color + background darkmode
+}
+
+.default-background-color {
+  //filter: invert(100%) sepia(44%) saturate(28%) hue-rotate(0deg) brightness(111%) contrast(91%);
+  color: #f4f4f4; //bright hintergrund und dark text
+}
+
+.spec-text-color {
+  //filter: invert(8%) sepia(75%) saturate(6406%) hue-rotate(344deg) brightness(98%) contrast(102%);
+  color: #9a031e; // fav color special text
+}
+
+.vector-color {
+  //filter: invert(56%) sepia(6%) saturate(139%) hue-rotate(131deg) brightness(85%) contrast(79%);
+  color: #7a7d7d; // vector color
+}
+
+.color8 {
+  //filter: invert(99%) sepia(4%) saturate(5310%) hue-rotate(298deg) brightness(124%) contrast(81%);
+  color: #e7e5df; // maybe background color brightmode
 }
