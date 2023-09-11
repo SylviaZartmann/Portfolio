@@ -11,7 +11,7 @@
 body {
   margin: 0;
   background-color: #f4f4f4;
-  font-family: 'overpass', sans-serif;
+  font-family: 'genos', sans-serif;
   cursor: default;
   display: flex;
   flex-direction: column;
@@ -24,14 +24,23 @@ html {
 
 h1, h2 {
   margin: 0;
-  
   font-family: 'tektur', sans-serif;
   cursor: default;
   background-color: #f4f4f4;
 }
 
+h2 {
+  color: #090a0a;
+  font-size: 130px;
+  line-height: 100%;
+  transform: scaleY(0.5);
+  width: fit-content;
+  &:hover {
+    color: #9a031e !important;
+}
+}
+
 p {
-  font-family: 'genos', sans-serif;
   color: #090a0a;
   font-weight: 600;
   letter-spacing: 0.7px;
