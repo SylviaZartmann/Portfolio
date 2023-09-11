@@ -11,6 +11,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { DotsComponent } from './dots/dots.component';
 import { LandingComponent } from './landing/landing.component';
+import { SampleComponent } from './sample/sample.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LandingComponent } from './landing/landing.component';
     ProjectsComponent,
     ContactComponent,
     DotsComponent,
-    LandingComponent
+    LandingComponent,
+    SampleComponent
   ],
   imports: [
     BrowserModule,

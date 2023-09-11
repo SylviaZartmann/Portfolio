@@ -1,0 +1,47 @@
+.sample-content {
+    padding: 50px 100px;
+    display: flex;
+    gap: 140px;
+    align-items: flex-start;
+}
+
+.samplecounter {
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'tektur', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    transform: scaleY(0.5);
+}
+
+.samplepic  {
+    img {
+        width: 620px;
+        height: 390px;
+        filter: grayscale(100%);
+        transition: 0.1s ease-in-out;
+        &:hover {
+            filter: grayscale(0);
+        }
+    }
+}
+
+.right {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    gap: 40px;
+}
+
+.sampletext {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    h3 {
+       font-size: 60px;
+    }
+    .button {
+        width: fit-content;
+    }
+}
