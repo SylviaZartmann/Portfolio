@@ -23,6 +23,7 @@ html {
 }
 
 h1, h2, h3 {
+  color: #090a0a;
   margin: 0;
   font-family: 'tektur', sans-serif;
   cursor: default;
@@ -30,7 +31,6 @@ h1, h2, h3 {
 }
 
 h2 {
-  color: #090a0a;
   font-size: 130px;
   line-height: 100%;
   transform: scaleY(0.5);
@@ -63,7 +63,6 @@ p {
   line-height: 100%;
   margin: 0;
   font-size: 21px;
-  pointer-events: none;
   background-color: #f4f4f4;
   
 

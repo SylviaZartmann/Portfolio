@@ -12,6 +12,7 @@ import { ContactComponent } from './contact/contact.component';
 import { DotsComponent } from './dots/dots.component';
 import { LandingComponent } from './landing/landing.component';
 import { SampleComponent } from './sample/sample.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SampleComponent } from './sample/sample.component';
     ContactComponent,
     DotsComponent,
     LandingComponent,
-    SampleComponent
+    SampleComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
