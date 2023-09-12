@@ -9,6 +9,7 @@
   img {
     height: 3px;
     width: 3px;
+    opacity: 0.3;
     filter: invert(51%) sepia(4%) saturate(195%) hue-rotate(131deg)
       brightness(95%) contrast(90%);
   }
