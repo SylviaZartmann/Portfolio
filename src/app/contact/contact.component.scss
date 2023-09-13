@@ -1,48 +1,85 @@
 .contact-content {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  padding-bottom: 50px;
+  background-color: #090a0a;
+  clip-path: polygon(
+    0 100%,
+    0 0,
+    100% 20%,
+    100% 100%
+  ); // (unten links), (oben links), (oben rechts), (unten rechts)
+  border: 2px solid #090a0a;
+  margin-bottom: -5px;
 }
 
 .contact-form {
+  background-color: #090a0a;
+  padding: 0 100px;
+  h2 {
+    padding-top: 180px;
     background-color: #090a0a;
-    height: 100vh;
-    clip-path: polygon(0 100%, 0 0, 100% 20%, 100% 100%); // (unten links), (oben links), (oben rechts), (unten rechts)
-    padding: 0 100px;
-    h2 {
-        padding-top: 180px;
-        background-color: #090a0a;
-        color: #f4f4f4;
-    }
+    color: #f4f4f4;
+  }
 }
 
 .contact-inputs {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    p {
-        background-color: #090a0a;
-        color: #f4f4f4;
-    }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  p {
+    background-color: #090a0a;
+    color: #f4f4f4;
+  }
 }
 
 form {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 35px;
-   margin-top: 50px;
-   input, textarea {
+  width: 620px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 50px;
+  input,
+  textarea {
     width: 100%;
-    padding:  15px 25px;
-   }
-   input {
+    padding: 15px 25px;
+    margin: 2px 0;
+    background-color: #090a0a;
+    color: #f4f4f4;
+    border: none;
+    border: 2px solid #090a0a;
+    border-bottom: 2px solid #f4f4f4;
+    font-family: "genos", sans-serif;
+    &::placeholder {
+      color: #f4f4f4;
+      font-family: "genos", sans-serif;
+      font-size: 21px;
+      font-weight: 400;
+    }
+    &:hover {
+      cursor:text;
+      border: 2px solid #f4f4f4;
+    }
+    &:focus {
+      outline: 2px solid #f4f4f4;
+    }
+    &:focus::placeholder {
+      padding-bottom: 20px;
+
+    }
+  }
+  input {
     height: 20px;
-   }
-   textarea {
+  }
+  textarea {
     resize: none;
-   }
+  }
+  button {
+    background-color: #090a0a;
+    color: #f4f4f4;
+    border: 2px solid #f4f4f4;
+  }
 }
