@@ -32,6 +32,7 @@
   p {
     background-color: #090a0a;
     color: #f4f4f4;
+
   }
 }
 
@@ -39,7 +40,7 @@ form {
   width: 620px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   margin-top: 50px;
   input,
@@ -53,6 +54,7 @@ form {
     border: 2px solid #090a0a;
     border-bottom: 2px solid #f4f4f4;
     font-family: "genos", sans-serif;
+    font-size: 21px;
     &::placeholder {
       color: #f4f4f4;
       font-family: "genos", sans-serif;
@@ -66,20 +68,38 @@ form {
     &:focus {
       outline: 2px solid #f4f4f4;
     }
-    &:focus::placeholder {
-      padding-bottom: 20px;
-
-    }
   }
+  p {
+      text-align: start;
+      display: flex;
+      margin-left: 15px;
+      margin-bottom: -22px;
+      padding: 0 10px;
+      background-color: #090a0a;
+      z-index: 2;
+      font-size: 21px;
+      font-weight: 400;
+    }
   input {
     height: 20px;
+    position: relative;
   }
   textarea {
     resize: none;
+    position: relative;
   }
   button {
     background-color: #090a0a;
     color: #f4f4f4;
     border: 2px solid #f4f4f4;
+  }
+  label {
+    color: #9a031e;
+    font-weight: 600;
+    margin-left: 25px;
+  }
+  img {
+    position: absolute;
+    z-index: 2;
   }
 }
