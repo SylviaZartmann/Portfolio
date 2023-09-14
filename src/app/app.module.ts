@@ -9,7 +9,6 @@ import { IntroductionComponent } from './introduction/introduction.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
-import { DotsComponent } from './dots/dots.component';
 import { LandingComponent } from './landing/landing.component';
 import { SampleComponent } from './sample/sample.component';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -23,7 +22,6 @@ import { NavigationComponent } from './navigation/navigation.component';
     SkillsComponent,
     ProjectsComponent,
     ContactComponent,
-    DotsComponent,
     LandingComponent,
     SampleComponent,
     NavigationComponent

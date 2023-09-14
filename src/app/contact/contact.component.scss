@@ -1,6 +1,5 @@
-.contact-content {
+.contact-background {
   width: 100vw;
-  padding-bottom: 50px;
   background-color: #090a0a;
   clip-path: polygon(
     0 100%,
@@ -8,13 +7,19 @@
     100% 20%,
     100% 100%
   ); // (unten links), (oben links), (oben rechts), (unten rechts)
+  display: flex;
+  justify-content: center;
+}
+
+.contact-content {
+  width: 1240px;
+  padding-bottom: 50px;
   border: 2px solid #090a0a;
   margin-bottom: -5px;
 }
 
 .contact-form {
   background-color: #090a0a;
-  padding: 0 100px;
   h2 {
     padding-top: 180px;
     background-color: #090a0a;
@@ -42,10 +47,21 @@ form {
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
-  margin-top: 50px;
+  margin: 50px 0;
+  &:focus-within {
+    p {
+      color: transparent !important;
+      background-color: transparent !important;
+    }
+  }
+  div {
+    display: flex; 
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
   input,
   textarea {
-    width: 100%;
     padding: 15px 25px;
     margin: 2px 0;
     background-color: #090a0a;
@@ -55,6 +71,9 @@ form {
     border-bottom: 2px solid #f4f4f4;
     font-family: "genos", sans-serif;
     font-size: 21px;
+    background-image: url("../../assets/img/input_sign.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
     &::placeholder {
       color: #f4f4f4;
       font-family: "genos", sans-serif;
@@ -67,26 +86,37 @@ form {
     }
     &:focus {
       outline: 2px solid #f4f4f4;
+      &::placeholder {
+        color: #090a0a;
+      }
     }
   }
+  input + p, textarea + p {
+    margin-bottom: -12px;
+  }
+
+  input:focus-within + p, textarea:focus-within + p {
+    color: #f4f4f4 !important;
+    background-color: #090a0a !important;
+  }
   p {
+      color: transparent !important;
+      background-color: transparent !important;
       text-align: start;
       display: flex;
+      width: max-content;
       margin-left: 15px;
-      margin-bottom: -22px;
       padding: 0 10px;
-      background-color: #090a0a;
       z-index: 2;
       font-size: 21px;
       font-weight: 400;
     }
   input {
     height: 20px;
-    position: relative;
+    width: -webkit-fill-available;
   }
   textarea {
     resize: none;
-    position: relative;
   }
   button {
     background-color: #090a0a;
@@ -97,9 +127,5 @@ form {
     color: #9a031e;
     font-weight: 600;
     margin-left: 25px;
-  }
-  img {
-    position: absolute;
-    z-index: 2;
   }
 }

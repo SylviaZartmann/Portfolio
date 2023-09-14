@@ -1,15 +1,22 @@
-.header {
+.header-background {
     position: fixed;
+    z-index: 1;
     height: fit-content;  
+    background-color: #F4F4F4;
+    width: 100vw;
     top: 0;
     left: 0;
-    right: 0;
-    background-color: #F4F4F4;
-    z-index: 1;
+    right:0;
+    display: grid;
+}
+
+.header-content {
     display: flex;
-    justify-content: space-between;
+    justify-self: center;
     align-items: center;
-    padding: 30px 100px;
+    justify-content: space-between;
+    padding: 30px 0;
+    width: 1240px;
     img {
         height: 70px;
         width: 70px;
@@ -17,8 +24,8 @@
         &:hover {
             pointer-events: all;
             cursor: crosshair;
-
         }
+
     }
 }
 

@@ -1,7 +1,17 @@
-.landing-content {
-    pointer-events: none;
+.landing-background {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1240px;
+
+}
+
+.landing-content {
+    width: 100%;
+    padding: 0 100px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -12,18 +22,21 @@
         line-height: 100%;
         margin: 9% 0 -6.5% 0;
         transform: scaley(0.6);
-    }}
+        margin-top: 30%;
+    }
+}
 
 .stroke-name {
+    cursor: none;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     gap: 20px;
     padding-bottom: 35px;
 }
 
 .stroke {
-    width: 40vw;
+    width: 577px;
     height: 3px;
     background-color: #090a0a;
 }
@@ -43,11 +56,11 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    width: 100%;
+    width: -webkit-fill-available;
+    padding-top: 10%;
     p {
         writing-mode: vertical-rl;
         pointer-events: none;
-        padding-right: 100px;
     }
     
 }
@@ -57,14 +70,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-right: -20px;
     gap: 10px;
     p {
-        margin-right: -20px;
+        text-align: center;
         writing-mode: unset;
         pointer-events: none;
     }
     img {
-        padding-right: 80px;
         filter: invert(2%) sepia(4%) saturate(1127%) hue-rotate(131deg) brightness(97%) contrast(97%);
     }
 }
