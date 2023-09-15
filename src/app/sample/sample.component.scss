@@ -1,47 +1,112 @@
 .sample-content {
-    padding-top: 50px;
-    display: flex;
-    gap: 140px;
-    align-items: flex-start;
-}
-
-.samplecounter {
-    display: flex;
-    justify-content: flex-end;
-    font-family: 'tektur', sans-serif;
-    font-size: 30px;
-    font-weight: 600;
-    transform: scaleY(0.5);
-}
-
-.samplepic  {
+  width: 1240px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  
+.samplepic {
+  transition: all 0.7s;
+  &:hover {
     img {
-        width: 620px;
-        height: 390px;
-        filter: grayscale(100%);
-        transition: 0.1s ease-in-out;
-        &:hover {
-            filter: grayscale(0);
-        }
+      transition: all 0.7s;
+      filter: grayscale(0);
     }
-}
+    .samplepic-border {
+      transition: all 0.7s;
+      border: 4px solid #090a0a;
 
-.right {
-    flex-wrap: wrap;
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    gap: 40px;
-}
+      img {
+        display: block;
+        animation: getBigger 0.7s;
+        animation-fill-mode: forwards;
+      }
+    }
 
-.sampletext {
+    .sampletext {
+      animation: changePosition 1s;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  .samplepic-border {
+    position: absolute;
+    top: 3%;
+    left: 1%;
+    width: 620px;
+    height: 390px;
+    border: 4px solid transparent;
+    z-index: 2;
+
+    img {
+      position: absolute;
+      display: none;
+      top: 44.5%;
+      right: -4.5%;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  img {
+    width: 620px;
+    height: 390px;
+    filter: grayscale(100%);
+  }
+
+  .sampletext {
+    width: 475px;
+    position: absolute;
+    top: 20%;
+    z-index: -1;
     display: flex;
     flex-direction: column;
     gap: 20px;
+
     h3 {
-       font-size: 60px;
+      font-size: 60px;
     }
+
     .button {
-        width: fit-content;
+      width: fit-content;
     }
+  }
+}
+
+.samplecounter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  font-family: "tektur", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  transform: scaleY(0.5);
+}
+}
+
+
+@keyframes changePosition {
+  from {
+    left: 0;
+    right: 60%;
+  }
+  to {
+    left: 60%;
+    right: 0;
+  }
+}
+
+@keyframes getBigger {
+  from {
+    width: 50px;
+    height: 50px;
+  }
+  to {
+    width: 100px;
+    height: 100px;
+    rotate: -90deg;
+    right: -8.5%;
+    top: 38%;
+  }
 }

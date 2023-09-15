@@ -43,9 +43,7 @@
 
 form {
   width: 620px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: grid;
   gap: 10px;
   margin: 50px 0;
   &:focus-within {
@@ -93,9 +91,11 @@ form {
   }
   input + p, textarea + p {
     margin-bottom: -12px;
+    transition: color 0.2s, background-color 0.2s;
   }
 
   input:focus-within + p, textarea:focus-within + p {
+    transition: color 0.4s, background-color 0.4s;
     color: #f4f4f4 !important;
     background-color: #090a0a !important;
   }
@@ -119,9 +119,9 @@ form {
     resize: none;
   }
   button {
-    background-color: #090a0a;
-    color: #f4f4f4;
-    border: 2px solid #f4f4f4;
+    justify-self: center;
+    width: max-content;
+    margin-top: 35px;
   }
   label {
     color: #9a031e;
