@@ -7,6 +7,7 @@
 .samplepic {
   transition: all 0.7s;
   &:hover {
+    width: 1240px;
     img {
       transition: all 0.7s;
       filter: grayscale(0);
@@ -35,9 +36,9 @@
     width: 620px;
     height: 390px;
     border: 4px solid transparent;
-    z-index: 2;
 
     img {
+      z-index: 2;
       position: absolute;
       display: none;
       top: 44.5%;
@@ -54,10 +55,10 @@
   }
 
   .sampletext {
+    z-index: 0;
     width: 475px;
     position: absolute;
     top: 20%;
-    z-index: -1;
     display: flex;
     flex-direction: column;
     gap: 20px;
