@@ -1,6 +1,7 @@
 .contact-background {
   width: 100vw;
   background-color: #090a0a;
+  margin-bottom: -2px;
   clip-path: polygon(
     0 100%,
     0 0,
@@ -79,7 +80,7 @@ form {
       font-weight: 400;
     }
     &:hover {
-      cursor:text;
+      cursor: url("../../assets/img/cursor/Cursor-default-red.png") 17 17, text;
       border: 2px solid #f4f4f4;
     }
     &:focus {
@@ -127,5 +128,6 @@ form {
     color: #9a031e;
     font-weight: 600;
     margin-left: 25px;
+    cursor: url("../../assets/img/cursor/Cursor-emptylogo-red.png") 17 17, crosshair;
   }
 }

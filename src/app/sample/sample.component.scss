@@ -1,57 +1,118 @@
 .sample-content {
   width: 1240px;
-  display: flex;
-  align-items: flex-start;
-  position: relative;
-  
-.samplepic {
-  transition: all 0.7s;
-  &:hover {
-    width: 1240px;
-    img {
-      transition: all 0.7s;
-      filter: grayscale(0);
-    }
-    .samplepic-border {
-      transition: all 0.7s;
-      border: 4px solid #090a0a;
+  display: grid;
+  gap: 50px;
 
+  .samplepic {
+    position: relative;
+    transition: all 0.7s;
+    &:hover {
+      cursor: url("../../assets/img/cursor/Cursor-logo-red.png") 17 17, crosshair;
       img {
-        display: block;
-        animation: getBigger 0.7s;
+        transition: all 0.7s;
+        filter: grayscale(0);
+      }
+      .samplepic-border {
+        transition: all 0.7s;
+        border: 4px solid #090a0a;
+
+        img {
+          display: block;
+          animation: getBigger 0.7s;
+          animation-fill-mode: forwards;
+        }
+      }
+
+      .sampletext {
+        animation: changePosition 1s ease-out;
         animation-fill-mode: forwards;
       }
     }
 
-    .sampletext {
-      animation: changePosition 1s;
-      animation-fill-mode: forwards;
-    }
-  }
+    .samplepic-border {
+      position: absolute;
+      top: 3%;
+      left: 1%;
+      width: 620px;
+      height: 390px;
+      border: 4px solid transparent;
 
-  .samplepic-border {
-    position: absolute;
-    top: 3%;
-    left: 1%;
-    width: 620px;
-    height: 390px;
-    border: 4px solid transparent;
+      img {
+        z-index: 2;
+        position: absolute;
+        display: none;
+        top: 44.5%;
+        right: -4.5%;
+        width: 50px;
+        height: 50px;
+      }
+    }
 
     img {
-      z-index: 2;
-      position: absolute;
-      display: none;
-      top: 44.5%;
-      right: -4.5%;
-      width: 50px;
-      height: 50px;
+      width: 620px;
+      height: 390px;
+      filter: grayscale(100%);
+    }
+
+    .samplecounter {
+      right: 0;
     }
   }
+  .samplepic-reverse {
+    position: relative;
+    transition: all 0.7s;
+    display: flex; //changed
+    justify-content: flex-end; //changed
+    &:hover {
+      cursor: url("../../assets/img/cursor/Cursor-logo-red.png") 17 17, crosshair;
+      img {
+        transition: all 0.7s;
+        filter: grayscale(0);
+      }
+      .samplepic-border {
+        transition: all 0.7s;
+        border: 4px solid #090a0a;
 
-  img {
-    width: 620px;
-    height: 390px;
-    filter: grayscale(100%);
+        img {
+          display: block;
+          animation: getBigger-reverse 0.7s; //changed
+          animation-fill-mode: forwards;
+        }
+      }
+
+      .sampletext {
+        animation: changePosition 1s reverse ease-in; //changed
+        animation-fill-mode: forwards;
+      }
+    }
+
+    .samplepic-border {
+      position: absolute;
+      top: 3%;
+      right: 1%; //changed
+      width: 620px;
+      height: 390px;
+      border: 4px solid transparent;
+
+      img {
+        z-index: 2;
+        position: absolute;
+        display: none;
+        top: 44.5%;
+        left: -5%; //changed
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    img {
+      width: 620px;
+      height: 390px;
+      filter: grayscale(100%);
+    }
+    .samplecounter {
+      left: 0; //changed
+    }
   }
 
   .sampletext {
@@ -62,21 +123,21 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-
-    h3 {
-      font-size: 60px;
-    }
-
-    .button {
-      width: fit-content;
-    }
   }
+
+  h3 {
+    font-size: 60px;
+  }
+}
+
+
+.button {
+  width: fit-content;
 }
 
 .samplecounter {
   position: absolute;
   top: 0;
-  right: 0;
   display: flex;
   justify-content: flex-end;
   font-family: "tektur", sans-serif;
@@ -84,8 +145,6 @@
   font-weight: 600;
   transform: scaleY(0.5);
 }
-}
-
 
 @keyframes changePosition {
   from {
@@ -108,6 +167,20 @@
     height: 100px;
     rotate: -90deg;
     right: -8.5%;
-    top: 38%;
+    top: 10%;
+  }
+}
+
+@keyframes getBigger-reverse {
+  from {
+    width: 50px;
+    height: 50px;
+  }
+  to {
+    width: 100px;
+    height: 100px;
+    rotate: 90deg;
+    left: -8.5%;
+    top: 10%;
   }
 }

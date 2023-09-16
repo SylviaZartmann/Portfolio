@@ -22,8 +22,7 @@
         width: 70px;
         filter: invert(2%) sepia(4%) saturate(1127%) hue-rotate(131deg) brightness(97%) contrast(97%);
         &:hover {
-            pointer-events: all;
-            cursor: crosshair;
+            cursor: url("/assets/img/cursor/Cursor-pointer-red.png") 17 17, crosshair;
         }
 
     }
@@ -40,7 +39,6 @@
         filter: invert(2%) sepia(4%) saturate(1127%) hue-rotate(131deg) brightness(97%) contrast(97%);
     }
     &:hover {
-        pointer-events: all !important;
-        cursor: crosshair;
+        cursor: url("/assets/img/cursor/Cursor-pointer-red.png") 17 17, crosshair;
     }
 }
