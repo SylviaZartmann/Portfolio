@@ -1,36 +1,54 @@
 <div class="contact-background">
-<div class="contact-content">
-  <div class="contact-form">
-    <h2>Say Hi!</h2>
-    <div class="contact-inputs">
-      <h4>Sie wollen Kontakt aufnehmen?</h4>
-      <p>Sagen Sie "Hallo" und lassen Sie uns in Kontakt treten.</p>
+  <div class="contact-content">
+    <div class="contact-form">
+      <h2>Say Hi!</h2>
+      <div class="contact-inputs">
+        <h4>Sie wollen Kontakt aufnehmen?</h4>
+        <p>Sagen Sie "Hallo" und lassen Sie uns in Kontakt treten.</p>
 
-      <form action="">
+        <form [formGroup]="FormData" (ngSubmit)="onSubmit()">
 
-        <div >
-          <input type="text" placeholder="Ihr Name" type="text">
-          <p>Ihr Name</p>
-        </div>
-        <label for="">Eingabe benötigt!</label>
+          <div class="input">
+            <input name="name" formControlName="name" type="text" id="name" placeholder="Ihr Name" type="text"
+              [class.invalid]="validateInput('name')">
+            <p>Ihr Name</p>
+            <span>
+              <img *ngIf="!FormData.controls.name.valid && isSubmitted" src="../../assets/img/input_sign.svg" alt="">
+              <img *ngIf="FormData.controls.name.valid && isSubmitted" src="../../assets/img/input_sign_valid.svg" alt="">
+            </span>
+          </div>
+          <span class="error" *ngIf="validateErrorText('name')">Valide Eingabe benötigt!</span>
 
-        <div>
-          <input type="email" placeholder="Ihre e-Mail Adresse">
-          <p>Ihre e-Mail Adresse</p>
-        </div>
-        <label for="">Eingabe benötigt!</label>
+          <div class="input">
+            <input name="email" formControlName="email" type="email" id="email" placeholder="Ihre e-Mail Adresse"
+            [class.invalid]="validateInput('email')">
+            <p>Ihre e-Mail Adresse</p>
+            <span>
+              <img *ngIf="!FormData.controls.email.valid && isSubmitted" src="../../assets/img/input_sign.svg" alt="">
+              <img *ngIf="FormData.controls.email.valid && isSubmitted" src="../../assets/img/input_sign_valid.svg" alt="">
+            </span>
+          </div>
+          <span class="error" *ngIf="validateErrorText('email') || !FormData.controls.email.valid && isSubmitted">Valide Eingabe benötigt!</span>
 
-        <div>
-          <textarea placeholder="Ihre Nachricht" name="" id="" cols="20" rows="5"></textarea>
-          <p>Ihre Nachricht</p>
-        </div>
-        <label for="">Eingabe benötigt!</label>
-        <button class="button-reverse">Nachricht senden</button>
-      </form>
+          <div class="textarea">
+            <textarea name="message" formControlName="message" placeholder="Ihre Nachricht" name="" id="message" cols="20"
+              rows="5"
+              [class.invalid]="validateInput('message')"></textarea>
+            <p>Ihre Nachricht</p>
+            <span>
+              <img *ngIf="!FormData.controls.message.valid && isSubmitted" src="../../assets/img/input_sign.svg" alt="">
+              <img *ngIf="FormData.controls.message.valid && isSubmitted" src="../../assets/img/input_sign_valid.svg" alt="">
+            </span>
+          </div>
+          
+          <span class="error" *ngIf="validateErrorText('message')">Valide Eingabe benötigt!</span>
+          <button class="button-reverse">Nachricht senden</button>
+        </form>
 
-      
+
+
+      </div>
 
     </div>
-
   </div>
-</div>  </div>
+</div>

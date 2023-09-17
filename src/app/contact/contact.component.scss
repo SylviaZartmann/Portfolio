@@ -38,14 +38,13 @@
   p {
     background-color: #090a0a;
     color: #f4f4f4;
-
   }
 }
 
 form {
   width: 620px;
   display: grid;
-  gap: 10px;
+  gap: 20px;
   margin: 50px 0;
   &:focus-within {
     p {
@@ -54,9 +53,26 @@ form {
     }
   }
   div {
-    display: flex; 
+    display: flex;
     flex-direction: column-reverse;
     width: 100%;
+  }
+
+  .textarea {
+    position: relative;
+    span {
+      position: absolute;
+      top: 16%;
+      right: 1%;
+    }
+  }
+  .input {
+    position: relative;
+    span {
+      position: absolute;
+      top: 40%;
+      right: 1%;
+    }
   }
 
   input,
@@ -70,9 +86,6 @@ form {
     border-bottom: 2px solid #f4f4f4;
     font-family: "genos", sans-serif;
     font-size: 21px;
-    background-image: url("../../assets/img/input_sign.svg");
-    background-repeat: no-repeat;
-    background-position: top right;
     &::placeholder {
       color: #f4f4f4;
       font-family: "genos", sans-serif;
@@ -90,28 +103,31 @@ form {
       }
     }
   }
-  input + p, textarea + p {
+  input + p,
+  textarea + p {
     margin-bottom: -12px;
     transition: color 0.2s, background-color 0.2s;
   }
 
-  input:focus-within + p, textarea:focus-within + p {
+  input:focus-within + p,
+  textarea:focus-within + p {
     transition: color 0.4s, background-color 0.4s;
     color: #f4f4f4 !important;
     background-color: #090a0a !important;
   }
   p {
-      color: transparent !important;
-      background-color: transparent !important;
-      text-align: start;
-      display: flex;
-      width: max-content;
-      margin-left: 15px;
-      padding: 0 10px;
-      z-index: 2;
-      font-size: 21px;
-      font-weight: 400;
-    }
+    color: transparent !important;
+    background-color: transparent !important;
+    text-align: start;
+    display: flex;
+    width: max-content;
+    margin-left: 15px;
+    padding: 0 10px;
+    z-index: 2;
+    font-size: 21px;
+    font-weight: 400;
+  }
+
   input {
     height: 20px;
     width: -webkit-fill-available;
@@ -123,11 +139,23 @@ form {
     justify-self: center;
     width: max-content;
     margin-top: 35px;
+    &:disabled {
+      &:hover {
+        padding: 10px 60px;
+        font-size: 21px;
+        letter-spacing: 0.7px;
+        line-height: 100%;
+        font-weight: 500;
+        cursor: url("../../assets/img/cursor/Cursor-logo-red.png") 17 17, default;
+      }
+    }
   }
-  label {
+  span {
     color: #9a031e;
     font-weight: 600;
     margin-left: 25px;
-    cursor: url("../../assets/img/cursor/Cursor-emptylogo-red.png") 17 17, crosshair;
+    margin-top: -10px;
+    cursor: url("../../assets/img/cursor/Cursor-emptylogo-red.png") 17 17,
+      crosshair;
   }
 }

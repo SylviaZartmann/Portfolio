@@ -25,24 +25,18 @@ html {
   scroll-behavior: smooth;
 }
 
-  
-
-
 h1, h2, h3 {
   color: #090a0a;
   margin: 0;
   font-family: 'tektur', sans-serif;
-}
-h1 {
   cursor: url("/assets/img/cursor/Cursor-emptylogo-red.png") 17 17, none;
-}
 
+}
 h2 {
   font-size: 130px;
   line-height: 100%;
   transform: scaleY(0.5);
   width: fit-content;
-  cursor: url("/assets/img/cursor/Cursor-emptylogo-red.png") 17 17, none;
   &:hover {
     color: #9a031e !important;
   }
@@ -54,7 +48,6 @@ h3 {
   line-height: 100%;
   transform: scaleY(0.5);
   width: fit-content;
-  cursor: url("/assets/img/cursor/Cursor-emptylogo-red.png") 17 17, none;
 }
 
 h4 {
