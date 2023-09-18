@@ -13,8 +13,8 @@
               [class.invalid]="validateInput('name')">
             <p>Ihr Name</p>
             <span>
-              <img *ngIf="!FormData.controls.name.valid && isSubmitted" src="../../assets/img/input_sign.svg" alt="">
-              <img *ngIf="FormData.controls.name.valid && isSubmitted" src="../../assets/img/input_sign_valid.svg" alt="">
+              <img *ngIf="!FormData.controls.name.valid && isSubmitted" src="assets/img/input_sign.svg" alt="">
+              <img *ngIf="FormData.controls.name.valid && isSubmitted" src="assets/img/input_sign_valid.svg" alt="">
             </span>
           </div>
           <span class="error" *ngIf="validateErrorText('name')">Valide Eingabe benötigt!</span>
@@ -24,8 +24,8 @@
             [class.invalid]="validateInput('email')">
             <p>Ihre e-Mail Adresse</p>
             <span>
-              <img *ngIf="!FormData.controls.email.valid && isSubmitted" src="../../assets/img/input_sign.svg" alt="">
-              <img *ngIf="FormData.controls.email.valid && isSubmitted" src="../../assets/img/input_sign_valid.svg" alt="">
+              <img *ngIf="!FormData.controls.email.valid && isSubmitted" src="assets/img/input_sign.svg" alt="">
+              <img *ngIf="FormData.controls.email.valid && isSubmitted" src="assets/img/input_sign_valid.svg" alt="">
             </span>
           </div>
           <span class="error" *ngIf="validateErrorText('email') || !FormData.controls.email.valid && isSubmitted">Valide Eingabe benötigt!</span>
@@ -36,8 +36,8 @@
               [class.invalid]="validateInput('message')"></textarea>
             <p>Ihre Nachricht</p>
             <span>
-              <img *ngIf="!FormData.controls.message.valid && isSubmitted" src="../../assets/img/input_sign.svg" alt="">
-              <img *ngIf="FormData.controls.message.valid && isSubmitted" src="../../assets/img/input_sign_valid.svg" alt="">
+              <img *ngIf="!FormData.controls.message.valid && isSubmitted" src="assets/img/input_sign.svg" alt="">
+              <img *ngIf="FormData.controls.message.valid && isSubmitted" src="assets/img/input_sign_valid.svg" alt="">
             </span>
           </div>
           

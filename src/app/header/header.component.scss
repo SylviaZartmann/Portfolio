@@ -22,7 +22,7 @@
         width: 70px;
         filter: invert(2%) sepia(4%) saturate(1127%) hue-rotate(131deg) brightness(97%) contrast(97%);
         &:hover {
-            cursor: url("/assets/img/cursor/Cursor-pointer-red.png") 17 17, crosshair;
+            cursor: url("../../assets/img/cursor/Cursor-emptylogo-red.png") 17 17, crosshair;
         }
 
     }
@@ -39,6 +39,6 @@
         filter: invert(2%) sepia(4%) saturate(1127%) hue-rotate(131deg) brightness(97%) contrast(97%);
     }
     &:hover {
-        cursor: url("/assets/img/cursor/Cursor-pointer-red.png") 17 17, crosshair;
+        cursor: url("../../assets/img/cursor/Cursor-emptylogo-red.png") 17 17, crosshair;
     }
 }

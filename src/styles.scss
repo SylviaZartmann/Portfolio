@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'genos';
-  src: url("/assets/fonts/Genos-VariableFont_wght.ttf") format("truetype");
-} // sieht im Fließtext schwierig aus
+  src: url("assets/fonts/Genos-VariableFont_wght.ttf") format("truetype");
+}
 
 @font-face {
   font-family: 'tektur';
-  src: url("/assets/fonts/Tektur-VariableFont_wdth,wght.ttf") format("truetype");
+  src: url("assets/fonts/Tektur-VariableFont_wdth,wght.ttf") format("truetype");
 }
 
 body {
@@ -18,7 +18,7 @@ body {
   background-image: radial-gradient(circle at 3px 40px, #dbdbdb 3px, transparent 0);
   background-size: 100px 120px;
   background-position: center;
-  cursor: url("/assets/img/cursor/Cursor-logo-red.png") 17 17, auto;
+  cursor: url("assets/img/cursor/Cursor-logo-red.png") 17 17, auto;
 }
 
 html {
@@ -29,7 +29,7 @@ h1, h2, h3 {
   color: #090a0a;
   margin: 0;
   font-family: 'tektur', sans-serif;
-  cursor: url("/assets/img/cursor/Cursor-emptylogo-red.png") 17 17, none;
+  cursor: url("assets/img/cursor/Cursor-emptylogo-red.png") 17 17, none;
 
 }
 h2 {
@@ -58,7 +58,7 @@ h4 {
   width: fit-content;
   margin: 0;
   margin-top: -20px;
-  cursor: url("/assets/img/cursor/Cursor-emptylogo-red.png") 17 17, none;
+  cursor: url("assets/img/cursor/Cursor-emptylogo-red.png") 17 17, none;
 }
 p {
   color: #090a0a;
@@ -68,7 +68,7 @@ p {
   margin: 0;
   font-size: 21px;
   background-color: #f4f4f4;
-  cursor: url("/assets/img/cursor/Cursor-emptylogo-red.png") 17 17, none;
+  cursor: url("assets/img/cursor/Cursor-emptylogo-red.png") 17 17, none;
 }
 
 ::-webkit-scrollbar {
@@ -116,7 +116,7 @@ p {
     transition: padding 0.3s, font-weight 0.3s;
     padding: 10px 70px;
     font-weight: 800;
-    cursor: url("/assets/img/cursor/Cursor-pointer-red.png") 17 17, none;
+    cursor: url("assets/img/cursor/Cursor-pointer-red.png") 17 17, none;
   }
 }
 

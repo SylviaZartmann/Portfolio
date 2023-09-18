@@ -18,19 +18,23 @@ export class ContactComponent {
 
   onSubmit() {
     this.isSubmitted = true;
-    this.sendMail();
+    if (
+      this.FormData.controls.name.valid &&
+      this.FormData.controls.email.valid &&
+      this.FormData.controls.message.valid
+    ) {
+      this.sendMail();
+    }
   }
 
   async sendMail() {
-    const sendData = {
-    name: this.FormData.controls.name.value,
-    email: this.FormData.controls.email.value,
-    message: this.FormData.controls.message.value
-  };
-  await fetch('https://sylvia-zartmann.developerakademie.net/send_mail/send_mail.php', {
-    method: 'POST',
-    body: JSON.stringify(sendData)
-  });
+      await fetch(
+        'https://sylvia-zartmann.developerakademie.net/send_mail/send_mail.php',
+        {
+          method: 'POST',
+          body: JSON.stringify(this.FormData.value),
+        }
+      );
   }
 
   validateInput(whichInput: string) {
@@ -42,8 +46,7 @@ export class ContactComponent {
   validateErrorText(whichInput: string) {
     return (
       this.FormData.get(whichInput)?.hasError('required') &&
-      (this.FormData.get(whichInput)?.dirty ||
-        this.isSubmitted)
+      (this.FormData.get(whichInput)?.dirty || this.isSubmitted)
     );
   }
 }

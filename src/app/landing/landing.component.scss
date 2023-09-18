@@ -27,7 +27,7 @@
 }
 
 .stroke-name {
-    cursor: url("/assets/img/cursor/Cursor-emptylogo-red.png") 17 17, none;
+    cursor: url("../../assets/img/cursor/Cursor-emptylogo-red.png") 17 17, none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +59,7 @@
     width: -webkit-fill-available;
     padding-top: 10%;
     p {
-        cursor: url("/assets/img/cursor/Cursor-emptylogo-red.png") 17 17, auto;
+        cursor: url("../../assets/img/cursor/Cursor-emptylogo-red.png") 17 17, auto;
         writing-mode: vertical-rl;
     }
     
@@ -73,7 +73,7 @@
     margin-right: -20px;
     gap: 10px;
     p {
-        cursor: url("/assets/img/cursor/Cursor-logo-red.png") 17 17, auto;
+        cursor: url("../../assets/img/cursor/Cursor-logo-red.png") 17 17, auto;
         text-align: center;
         writing-mode: unset;
     }
