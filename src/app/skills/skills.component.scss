@@ -4,13 +4,15 @@
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  max-width: 1240px;
-  position: relative;
 }
 
 .wrapper {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 100px;
   display: grid;
   align-items: center;
+  position: relative;
   h2 {
     justify-self: center;
     margin-bottom: -63px;

@@ -1,17 +1,7 @@
-.landing-background {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1240px;
-
-}
-
 .landing-content {
     width: 100%;
-    padding: 0 100px;
+    max-width: 1240px;
+    margin: 0 100px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -22,7 +12,7 @@
         line-height: 100%;
         margin: 9% 0 -6.5% 0;
         transform: scaley(0.6);
-        margin-top: 30%;
+        margin-top: 20%;
     }
 }
 
@@ -57,7 +47,6 @@
     justify-content: space-between;
     align-items: flex-end;
     width: -webkit-fill-available;
-    padding-top: 10%;
     p {
         cursor: url("../../assets/img/cursor/Cursor-emptylogo-red.png") 17 17, auto;
         writing-mode: vertical-rl;

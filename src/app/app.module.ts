@@ -13,6 +13,8 @@ import { ContactComponent } from './contact/contact.component';
 import { LandingComponent } from './landing/landing.component';
 import { SampleComponent } from './sample/sample.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { NavigationComponent } from './navigation/navigation.component';
     ContactComponent,
     LandingComponent,
     SampleComponent,
-    NavigationComponent
+    NavigationComponent,
+    LegalNoticeComponent,
+    MainpageComponent
   ],
   imports: [
     BrowserModule,
