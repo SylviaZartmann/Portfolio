@@ -6,7 +6,7 @@
         <h4>Sie wollen Kontakt aufnehmen?</h4>
         <p>Sagen Sie "Hallo" und lassen Sie uns in Kontakt treten.</p>
 
-        <form [formGroup]="FormData" (ngSubmit)="onSubmit()">
+        <div class="form" [formGroup]="FormData">
 
           <div class="input">
             <input name="name" formControlName="name" type="text" id="name" placeholder="Ihr Name" type="text"
@@ -42,13 +42,9 @@
           </div>
           
           <span class="error" *ngIf="validateErrorText('message')">Valide Eingabe benötigt!</span>
-          <button class="button-reverse">Nachricht senden</button>
-        </form>
-
-
-
+          <button (click)="onSubmit()" class="button-reverse">Nachricht senden</button>
+        </div>
       </div>
-
     </div>
   </div>
 </div>

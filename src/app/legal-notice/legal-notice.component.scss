@@ -1,0 +1,46 @@
+.ln-background {
+  width: 100vw;
+  display: grid;
+  .ln-content {
+    justify-self: center;
+    width: 100%;
+    max-width: 1240px;
+    margin: 200px 100px -50px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    h2 {
+      font-size: 60px;
+    }
+    h3 {
+      font-size: 35px;
+    }
+    p {
+      font-weight: 400;
+    }
+    strong {
+        font-weight: 600;
+    }
+    li {
+        letter-spacing: 0.7px;
+        line-height: 100%;
+        margin: 0;
+        font-size: 21px;
+    }
+    a {
+        color: #9a031e;
+        text-decoration: none;
+        &:hover {
+        text-decoration: underline;
+        cursor: url("../../assets/img/cursor/Cursor-emptylogo-red.png")17 17,  auto;
+        }
+    }
+    &:last-child {
+        padding-bottom: 100px;
+    }
+    #Präambel, #Verantwortlicher, #Verarbeitungen, #Rechtsgrundlagen, #Sicherheitsmaßnahmen, #Personen, #Anfragenverwaltung, #Netzwerken, #Plugins{
+        scroll-margin-top: 180px;
+    }
+  }
+}

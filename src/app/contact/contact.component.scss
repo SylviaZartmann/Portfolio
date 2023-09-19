@@ -14,9 +14,8 @@
 
 .contact-content {
   width: 1240px;
-  padding-bottom: 50px;
   border: 2px solid #090a0a;
-  margin-bottom: -5px;
+  margin-top: -50px;
 }
 
 .contact-form {
@@ -41,7 +40,7 @@
   }
 }
 
-form {
+.form {
   width: 620px;
   display: grid;
   gap: 20px;

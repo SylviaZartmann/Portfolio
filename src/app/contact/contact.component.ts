@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -14,7 +14,8 @@ export class ContactComponent {
   });
   isSubmitted = false;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder ) {}
+
 
   onSubmit() {
     this.isSubmitted = true;
@@ -49,4 +50,6 @@ export class ContactComponent {
       (this.FormData.get(whichInput)?.dirty || this.isSubmitted)
     );
   }
+
+
 }
