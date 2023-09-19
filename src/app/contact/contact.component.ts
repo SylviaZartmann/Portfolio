@@ -25,6 +25,8 @@ export class ContactComponent {
       this.FormData.controls.message.valid
     ) {
       this.sendMail();
+      this.FormData.reset();
+      this.isSubmitted = false;
     }
   }
 

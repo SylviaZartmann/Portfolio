@@ -36,11 +36,15 @@
       width: 620px;
       height: 390px;
       border: 4px solid transparent;
+      a {
+        cursor: url("../../assets/img/cursor/Cursor-default-red.png") 17 17, crosshair;
+      }
 
       img {
         z-index: 2;
         position: absolute;
         display: none;
+        transform: scaleX(-1);
         top: 44.5%;
         right: -4.5%;
         width: 50px;
@@ -93,6 +97,9 @@
       width: 620px;
       height: 390px;
       border: 4px solid transparent;
+      a {
+        cursor: url("../../assets/img/cursor/Cursor-pointer-red.png") 17 17, crosshair;
+      }
 
       img {
         z-index: 2;
@@ -165,9 +172,9 @@
   to {
     width: 100px;
     height: 100px;
-    rotate: -90deg;
     right: -8.5%;
     top: 10%;
+    rotate: 180deg;
   }
 }
 
@@ -179,8 +186,8 @@
   to {
     width: 100px;
     height: 100px;
-    rotate: 90deg;
     left: -8.5%;
     top: 10%;
+    rotate: -180deg;
   }
 }
