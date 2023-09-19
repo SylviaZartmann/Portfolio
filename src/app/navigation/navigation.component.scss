@@ -21,15 +21,25 @@
         top: 70%;
         left: 0;
         bottom: 0;
-        border-left: 3px solid #090a0a;
+        border-left: 4px solid #090a0a;
       }
       .borderbottom {
         position: absolute;
+        width: 7%;
+        left: 0;
         top: 100%;
-        left: 50%;
         bottom: 0;
-        border-left: 3px solid #090a0a;
-
+        border-bottom: 4px solid #090a0a;
+      }
+      &:hover {
+        .borderleft {
+          animation: borderdown 0.5s ease-in;
+          animation-fill-mode: forwards;
+        }
+        .borderbottom {
+          animation: borderright 0.5s ease-in;
+          animation-fill-mode: forwards;
+        }
       }
     }
 

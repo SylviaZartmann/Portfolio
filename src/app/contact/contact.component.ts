@@ -31,11 +31,15 @@ export class ContactComponent {
   }
 
   async sendMail() {
+    const body = new FormData();
+    body.append('name', this.FormData.controls.name.value as string);
+    body.append('email', this.FormData.controls.email.value as string);
+    body.append('message', this.FormData.controls.message.value as string);
       await fetch(
         'https://sylvia-zartmann.developerakademie.net/send_mail/send_mail.php',
         {
           method: 'POST',
-          body: JSON.stringify(this.FormData.value),
+          body: body,
         }
       );
   }
