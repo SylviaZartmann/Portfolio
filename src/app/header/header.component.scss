@@ -1,44 +1,169 @@
 .header-background {
-    position: fixed;
-    z-index: 5;
-    height: fit-content;  
-    background-color: #F4F4F4;
-    width: 100vw;
-    top: 0;
-    left: 0;
-    right:0;
-    display: grid;
+  position: fixed;
+  z-index: 5;
+  height: fit-content;
+  background-color: #f4f4f4;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: grid;
 }
 
 .header-content {
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px 0;
-    width: 1240px;
-    img {
-        height: 70px;
-        width: 70px;
-        filter: invert(2%) sepia(4%) saturate(1127%) hue-rotate(131deg) brightness(97%) contrast(97%);
-        &:hover {
-            cursor: url("../../assets/img/cursor/Cursor-emptylogo-red.png") 17 17, crosshair;
-        }
-
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+  width: 1240px;
+  img {
+    height: 70px;
+    width: 70px;
+    filter: invert(2%) sepia(4%) saturate(1127%) hue-rotate(131deg)
+      brightness(97%) contrast(97%);
+    &:hover {
+      cursor: url("../../assets/img/cursor/Cursor-emptylogo-red.png") 17 17,
+        crosshair;
     }
+  }
 }
 
 .header-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 32px;
-    img {
-        width: 40px;
-        height: auto;
-        filter: invert(2%) sepia(4%) saturate(1127%) hue-rotate(131deg) brightness(97%) contrast(97%);
-    }
-    &:hover {
-        cursor: url("../../assets/img/cursor/Cursor-emptylogo-red.png") 17 17, crosshair;
-    }
+  height: 40px;
+  width: 40px;
+  position: relative;
+  .border {
+    width: 100%;
+    border-block-end: 4px solid #090a0a;
+  }
+  :nth-child(1) {
+    position: absolute;
+    top: 10%;
+  }
+  :nth-child(2) {
+    position: absolute;
+    top: 50%;
+    left: 0;
+  }
+  :nth-child(3) {
+    position: absolute;
+    top: 90%;
+  }
+  &:hover {
+    cursor: url("../../assets/img/cursor/Cursor-emptylogo-red.png") 17 17,
+      crosshair;
+  }
+}
+.animation {
+  :nth-child(1) {
+    animation: crossMenu-1border 0.3s ease-in forwards;
+  }
+  :nth-child(2) {
+    animation: crossMenu-2border 0.3s ease-in forwards;
+  }
+  :nth-child(3) {
+    animation: crossMenu-3border 0.3s ease-in forwards;
+  }
+}
+
+.reverse-animation {
+  :nth-child(1) {
+    animation: crossMenu-1border-reverse 0.3s ease-in forwards;
+  }
+  :nth-child(2) {
+    animation: crossMenu-2border-reverse 0.3s ease-in forwards;
+  }
+  :nth-child(3) {
+    animation: crossMenu-3border-reverse 0.3s ease-in forwards;
+  }
+}
+
+@keyframes crossMenu-1border {
+  0% {
+    top: 10%;
+    right: 0;
+  }
+  50% {
+    width: 18px;
+    right: 0;
+  }
+  100% {
+    top: 30%;
+    width: 18px;
+    right: 5%;
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes crossMenu-2border {
+  from {
+    top: 50%;
+    left: 0;
+  }
+
+  to {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes crossMenu-3border {
+  0% {
+    top: 90%;
+  }
+  50% {
+    width: 18px;
+    left: 0;
+  }
+  100% {
+    width: 18px;
+    top: 70%;
+    left: 5%;
+    transform: rotate(-45deg);
+  }
+}
+
+
+@keyframes crossMenu-1border-reverse {
+  0% {
+    top: 30%;
+    width: 18px;
+    right: 5%;
+    transform: rotate(-45deg);
+  }
+  50% {
+    width: 18px;
+    right: 0;
+  }
+  100% {
+    top: 10%;
+    right: 0;
+  }
+}
+
+@keyframes crossMenu-2border-reverse {
+  from {
+    transform: rotate(45deg);
+  }
+
+  to {
+    top: 50%;
+    left: 0;
+  }
+}
+
+@keyframes crossMenu-3border-reverse {
+  0% {
+    width: 18px;
+    top: 70%;
+    left: 5%;
+    transform: rotate(-45deg);
+  }
+  50% {
+    width: 18px;
+    left: 0;
+  }
+  100% {
+    top: 90%;
+  }
 }

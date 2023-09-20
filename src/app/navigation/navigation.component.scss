@@ -33,15 +33,50 @@
       }
       &:hover {
         .borderleft {
-          animation: borderdown 0.5s ease-in;
+          animation: borderdown 0.1s ease-in;
           animation-fill-mode: forwards;
         }
         .borderbottom {
-          animation: borderright 0.5s ease-in;
+          animation: borderright 0.5s;
           animation-fill-mode: forwards;
         }
       }
     }
+
+     @keyframes borderdown {
+      from {
+        top: 70%;
+      }
+      to {
+        top: 100%;
+      }
+     }
+
+     @keyframes borderright {
+      0% {
+        width: 7%;
+        left: 0;
+      }
+      50% {
+        width: 100%;
+        left: 0;
+      }
+      51% {
+        width: 100%;
+        right: 0;
+        left: 0;
+      }
+      70% {
+        width: 100%;
+        right: 0;
+        left: unset;
+      }
+      100% {
+        width: 20%;
+        right: 0;
+        left: unset;
+      }
+     }
 
     h2 {
       text-align: center;
@@ -89,4 +124,12 @@
   background-color: #090a0a;
   clip-path: polygon(0 100%, 0 0, 100% 50%, 100% 100%);
   display: grid;
+}
+
+.left {
+  a {
+    &:hover {
+      cursor: url("../../assets/img/cursor/Cursor-emptylogo-red.png") 17 17, crosshair;
+    }
+  }
 }
