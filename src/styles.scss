@@ -48,6 +48,17 @@ h2 {
   &:hover {
     color: $red !important;
   }
+  @media (max-width: $step1Respo) {
+    font-size: $h2FontSize2;
+  }
+  @media (max-width: $step2Respo) {
+    font-size: $h2FontSize3;
+    text-align: center;
+    width: unset;
+  }
+  @media (max-width: $step3Respo) {
+    font-size: $h2FontSize4;
+  }
 }
 
 h3 {
@@ -74,7 +85,7 @@ p {
   letter-spacing: 0.7px;
   line-height: 100%;
   margin: 0;
-  font-size: 21px;
+  font-size: $textFontSize1;
   background-color: $white;
   cursor: $cursorCircleRed;
 }
@@ -82,12 +93,6 @@ p {
 ::-webkit-scrollbar {
   display: none;
 }
-
-
-
-
-
-
 
 .button,
 .button-reverse {

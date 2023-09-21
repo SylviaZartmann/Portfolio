@@ -2,19 +2,44 @@
 
 .landing-content {
   width: 100%;
-  max-width: 1240px;
   margin: 0 100px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  max-width: $screenWidth1;
+  @media (max-width: $step1Respo) {
+    width: $screenWidth2;
+  }
+  @media (max-width: $step2Respo) {
+    width: $screenWidth3;
+  }
+  @media (max-width: $step3Respo) {
+    width: $screenWidth4;
+  }
+  @media (max-width: $step4Respo) {
+    width: $screenWidth5;
+  }
   h1 {
     text-align: center;
     font-size: 200px;
     line-height: 100%;
     margin: 9% 0 -6.5% 0;
     transform: scaley(0.6);
-    margin-top: 20%;
+    margin-top: 20%;  
+    @media (max-width: $step1Respo) {
+      font-size: 150px;
+    }
+    @media (max-width: $step2Respo) {
+      font-size: 100px;
+    }
+    @media (max-width: $step3Respo) {
+      font-size: 80px;
+      margin-top: 0;  
+    }
+    @media (max-width: $step4Respo) {
+      font-size: 60px;
+    }
   }
 }
 
@@ -26,23 +51,49 @@
   gap: 20px;
   padding-bottom: 35px;
   color: $red;
-}
-
-.stroke {
-  width: 577px;
-  height: 3px;
-  background-color: $black;
-}
-
-.landing-name {
-  text-wrap: nowrap;
-  font-family: $genos;
-  font-size: 42px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%;
-  letter-spacing: -1.2px;
-  margin-bottom: 5px;
+  @media (max-width: $step3Respo) {
+    flex-direction: column;
+  }
+  .stroke {
+    width: 577px;
+    height: 3px;
+    background-color: $black;
+    @media (max-width: $step1Respo) {
+      width: 377px;
+    }
+    @media (max-width: $step2Respo) {
+      width: 237px;
+      height: 2px;
+    }
+    @media (max-width: $step3Respo) {
+      width: 277px;
+      height: 1px;
+      margin-top: 10px;
+      margin-bottom: -10px;
+    }
+    @media (max-width: $step4Respo) {
+      width: 177px;
+    }
+  }
+  .landing-name {
+    text-wrap: nowrap;
+    font-family: $genos;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -1.2px;
+    margin-bottom: 5px;
+    @media (max-width: $step1Respo) {
+      font-size: 37px;
+    }
+    @media (max-width: $step2Respo) {
+      font-size: 32px;
+    }
+    @media (max-width: $step3Respo) {
+      font-size: 27px;
+    }
+  }
 }
 
 .scroll-mail {
@@ -53,6 +104,7 @@
   p {
     cursor: $cursorCircleRed;
     writing-mode: vertical-rl;
+
   }
 }
 
@@ -63,8 +115,10 @@
   justify-content: center;
   margin-right: -20px;
   gap: 10px;
+  @media (max-width: $step2Respo) {
+    margin-right: 0px;
+  }
   p {
-
     cursor: $cursorLogoRed;
     text-align: center;
     writing-mode: unset;
@@ -74,6 +128,10 @@
     height: 160px;
     position: relative;
     overflow: hidden;
+    @media (max-width: $step2Respo) {
+      width: 70px;
+      height: 140px;
+    }
     img {
       position: absolute;
       top: -100%;
@@ -82,6 +140,10 @@
       filter: $filterBlack;
       animation: arrowDown 2s infinite;
       animation-delay: 7s;
+      @media (max-width: $step2Respo) {
+        width: 70px;
+        height: 140px;
+      }
     }
   }
 }

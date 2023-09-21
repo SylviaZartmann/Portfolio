@@ -3,11 +3,24 @@
 .intro-content {
   width: 100vw;
   height: fit-content;
-  max-width: 1240px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin: 0 100px;
+  max-width: $screenWidth1;
+  @media (max-width: $step1Respo) {
+    width: $screenWidth2;
+  }
+  @media (max-width: $step2Respo) {
+    width: $screenWidth3;
+    padding: 10px 0;
+  }
+  @media (max-width: $step3Respo) {
+    width: $screenWidth4;
+  }
+  @media (max-width: $step4Respo) {
+    width: $screenWidth5;
+  }
   h2 {
     margin: 0 0 20px 0;
   }
@@ -17,17 +30,39 @@
   display: flex;
   align-items: flex-start;
   gap: 125px;
-}
 
-.aboutme-content {
+  @media (max-width: $step2Respo) {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  @media (max-width: $step3Respo) {
+    width: $screenWidth4;
+  }
+  @media (max-width: $step4Respo) {
+    width: $screenWidth5;
+  }
+  .aboutme-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: fit-content;
   gap: 70px;
-  
+
+  @media (max-width: $step2Respo) {
+    gap: 30px;
+  }
+
+  p {
+    @media (max-width: $step2Respo) {
+      text-align: justify;
+    }
+  }
+  }
 }
+
+
 
 .display {
   display: grid;
@@ -35,7 +70,17 @@
   .display-img img {
     filter: grayscale(100%);
     padding-right: 20px;
-    
+     width: 450px;
+     height: 450px;
+     @media (max-width: $step3Respo) {
+      width: 400px;
+      height: 400px;
+     }
+
+     @media (max-width: $step4Respo) {
+      width: 330px;
+      height: 330px;
+     }
   }
   div {
     justify-self: flex-end;
@@ -49,9 +94,19 @@
     height: 446px;
     width: 446px;
     border: 4px solid transparent;
+    
     &:hover {
       transition: border 0.2s;
       border: 4px solid #090a0a;
+    }
+    @media (max-width: $step3Respo) {
+     width: 396px;
+     height: 396px;
+    }
+
+    @media (max-width: $step4Respo) {
+     width: 326px;
+     height: 326px;
     }
   }
   .arrow_left_anim {
@@ -70,6 +125,9 @@
       position: absolute;
       width: 180px;
       height: 180px;
+    }
+    @media (max-width: $step2Respo) {
+      margin-top: -10px;
     }
   }
 }

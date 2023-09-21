@@ -18,7 +18,20 @@
   align-items: center;
   justify-content: space-between;
   padding: 30px 0;
-  width: 1240px;
+  width: $screenWidth1;
+  @media (max-width: $step1Respo) {
+    width: $screenWidth2;
+  }
+  @media (max-width: $step2Respo) {
+    width: $screenWidth3;
+    padding: 10px 0;
+  }
+  @media (max-width: $step3Respo) {
+    width: $screenWidth4;
+  }
+  @media (max-width: $step4Respo) {
+    width: $screenWidth5;
+  }
   img {
     height: 70px;
     width: 70px;

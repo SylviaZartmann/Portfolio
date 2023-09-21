@@ -10,11 +10,24 @@
 
 .wrapper {
   width: 100%;
-  max-width: 1240px;
   margin: 0 100px;
   display: grid;
   align-items: center;
   position: relative;
+  max-width: $screenWidth1;
+  @media (max-width: $step1Respo) {
+    width: $screenWidth2;
+  }
+  @media (max-width: $step2Respo) {
+    width: $screenWidth3;
+    padding: 10px 0;
+  }
+  @media (max-width: $step3Respo) {
+    width: $screenWidth4;
+  }
+  @media (max-width: $step4Respo) {
+    width: $screenWidth5;
+  }
   h2 {
     justify-self: center;
     margin-bottom: -63px;
@@ -30,6 +43,7 @@
   align-items: flex-start;
   justify-content: center;
   gap: 50px;
+  flex-wrap: wrap;
 
   .skills {
     display: flex;
@@ -41,19 +55,8 @@
     cursor: $cursorCircleRed;
     img {
       height: 75px;
-      transition: transform 2s;
-
       &:hover {
-        filter: $fitlerRed;
-        transform: rotate(360deg);
-      }
-    }
-
-    &:nth-child(even) {
-      img {
-        &:hover {
-          transform: rotate(-360deg);
-        }
+        animation: skillhover 5s infinite;
       }
     }
 
@@ -70,7 +73,7 @@
   align-items: center;
   border: 5px solid $black;
   gap: 70px;
-  padding: 130px 50px 100px 50px;
+  padding: 130px 150px 100px 150px;
   width: min-content;
   width: -webkit-fill-available;
 }
@@ -90,5 +93,40 @@
     transform: scaleX(-1);
     width: 180px;
     height: 180px;
+  }
+}
+
+
+@keyframes skillhover {
+  0% {
+    filter: $fitlerRed;
+  }
+    
+  20% {
+    filter: $fitlerRed;
+    transform: rotate(360deg);
+  }
+
+  40% {
+    filter: $fitlerRed;
+    transform: rotate(360deg);
+    transform: scaleX(-1);
+  }
+
+  60% {
+    filter: $fitlerRed;
+    transform: rotate(360deg);
+    transform: scaleX(1);
+  }
+  80% {
+    filter: $fitlerRed;
+    transform: rotate(360deg);
+    transform: scaleY(-1);
+  }
+
+  100% {
+  filter: $fitlerRed;
+  transform: rotate(0);
+  transform: scaleY(1);
   }
 }
