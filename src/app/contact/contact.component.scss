@@ -1,6 +1,8 @@
+@import "/src/variables.scss";
+
 .contact-background {
   width: 100vw;
-  background-color: #090a0a;
+  background-color: $black;
   margin-bottom: -2px;
   clip-path: polygon(
     0 100%,
@@ -14,16 +16,16 @@
 
 .contact-content {
   width: 1240px;
-  border: 2px solid #090a0a;
+  border: 2px solid $black;
   margin-top: -50px;
 }
 
 .contact-form {
-  background-color: #090a0a;
+  background-color: $black;
   h2 {
     padding-top: 180px;
-    background-color: #090a0a;
-    color: #f4f4f4;
+    background-color: $black;
+    color: $white;
   }
 }
 
@@ -35,8 +37,8 @@
   align-items: center;
   gap: 10px;
   p {
-    background-color: #090a0a;
-    color: #f4f4f4;
+    background-color: $black;
+    color: $white;
   }
 }
 
@@ -78,27 +80,27 @@ form {
   textarea {
     padding: 15px 25px;
     margin: 2px 0;
-    background-color: #090a0a;
-    color: #f4f4f4;
+    background-color: $black;
+    color: $white;
     border: none;
-    border: 2px solid #090a0a;
-    border-bottom: 2px solid #f4f4f4;
-    font-family: "genos", sans-serif;
+    border: 2px solid $black;
+    border-bottom: 2px solid $white;
+    font-family: $genos;
     font-size: 21px;
     &::placeholder {
-      color: #f4f4f4;
-      font-family: "genos", sans-serif;
+      color: $white;
+      font-family: $genos;
       font-size: 21px;
       font-weight: 400;
     }
     &:hover {
-      cursor: url("../../assets/img/cursor/Cursor-default-red.png") 17 17, text;
-      border: 2px solid #f4f4f4;
+      cursor: $cursorPointLeftRed;
+      border: 2px solid $white;
     }
     &:focus {
-      outline: 2px solid #f4f4f4;
+      outline: 2px solid $white;
       &::placeholder {
-        color: #090a0a;
+        color: $black;
       }
     }
   }
@@ -111,8 +113,8 @@ form {
   input:focus-within + p,
   textarea:focus-within + p {
     transition: color 0.4s, background-color 0.4s;
-    color: #f4f4f4 !important;
-    background-color: #090a0a !important;
+    color: $white !important;
+    background-color: $black !important;
   }
   p {
     color: transparent !important;
@@ -145,16 +147,15 @@ form {
         letter-spacing: 0.7px;
         line-height: 100%;
         font-weight: 500;
-        cursor: url("../../assets/img/cursor/Cursor-logo-red.png") 17 17, default;
+        cursor: $cursorLogoRed;
       }
     }
   }
   span {
-    color: #9a031e;
+    color: $red;
     font-weight: 600;
     margin-left: 25px;
     margin-top: -10px;
-    cursor: url("../../assets/img/cursor/Cursor-emptylogo-red.png") 17 17,
-      crosshair;
+    cursor: $cursorCircleRed;
   }
 }

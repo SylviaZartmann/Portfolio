@@ -1,6 +1,6 @@
 <div class="header-background">
     <div class="header-content">
-        <img routerLink="/" src="assets/img/Logo-03.png" alt="">
+        <img routerLink="/" src="assets/img/Logo-03.png" alt="" (click)="toggleAnimation()">
         <div routerLink="/navigation" class="header-menu" (click)="toggleAnimation()" 
         [ngClass]="{'animation': playAnimation, 'reverse-animation': !playAnimation && !freshLoad}">
             <div class="border" *ngFor="let item of [].constructor(3); let i = index"></div>

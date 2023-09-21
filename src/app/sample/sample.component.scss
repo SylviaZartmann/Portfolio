@@ -1,3 +1,5 @@
+@import "/src/variables.scss";
+
 .sample-content {
   width: 1240px;
   display: grid;
@@ -7,14 +9,14 @@
     position: relative;
     transition: all 0.7s;
     &:hover {
-      cursor: url("../../assets/img/cursor/Cursor-logo-red.png") 17 17, crosshair;
+      cursor: $cursorLogoRed;
       img {
         transition: all 0.7s;
         filter: grayscale(0);
       }
       .samplepic-border {
         transition: all 0.7s;
-        border: 4px solid #090a0a;
+        border: 4px solid $black;
         img {
           display: block;
           animation: getBigger 0.7s;
@@ -36,7 +38,7 @@
       height: 390px;
       border: 4px solid transparent;
       a {
-        cursor: url("../../assets/img/cursor/Cursor-default-red.png") 17 17, crosshair;
+        cursor: $cursorPointLeftRed;
       }
 
       img {
@@ -72,14 +74,14 @@
     display: flex; //changed
     justify-content: flex-end; //changed
     &:hover {
-      cursor: url("../../assets/img/cursor/Cursor-logo-red.png") 17 17, crosshair;
+      cursor: $cursorLogoRed;
       img {
         transition: all 0.7s;
         filter: grayscale(0);
       }
       .samplepic-border {
         transition: all 0.7s;
-        border: 4px solid #090a0a;
+        border: 4px solid $black;
 
         img {
           display: block;
@@ -102,7 +104,7 @@
       height: 390px;
       border: 4px solid transparent;
       a {
-        cursor: url("../../assets/img/cursor/Cursor-pointer-red.png") 17 17, crosshair;
+        cursor: $cursorPointRightRed;
       }
 
       img {
@@ -155,7 +157,7 @@
   top: 0;
   display: flex;
   justify-content: flex-end;
-  font-family: "tektur", sans-serif;
+  font-family: $tektur;
   font-size: 30px;
   font-weight: 600;
   transform: scaleY(0.5);

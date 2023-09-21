@@ -1,14 +1,15 @@
+@import "/src/variables.scss";
+
 .footer-background {
-  background-color: #090a0a;
+  background-color: $black;
   width: 100vw;
   height: fit-content;
   p {
-    color: #f4f4f4;
-    background-color: #090a0a;
+    color: $white;
+    background-color: $black;
   }
   img {
-    filter: invert(100%) sepia(44%) saturate(28%) hue-rotate(0deg)
-      brightness(111%) contrast(91%);
+    filter: $filterWhite;
   }
   display: grid;
 }
@@ -31,8 +32,7 @@
   flex-direction: column;
   gap: 20px;
   img {
-    filter: invert(100%) sepia(44%) saturate(28%) hue-rotate(0deg) brightness(111%) contrast(91%);
-    width: 50px;
+    filter: $filterWhite;
   }
 }
 
@@ -45,10 +45,10 @@
     transition: margin-top 0.3s;
     width: 40px;
     height: 40px;
-    filter: invert(100%) sepia(44%) saturate(28%) hue-rotate(0deg) brightness(111%) contrast(91%);
+    filter: $filterWhite;
     &:hover {
-      cursor: url("../../assets/img/cursor/Cursor-pointer-red.png") 17 17, crosshair;
-      filter: invert(8%) sepia(75%) saturate(6406%) hue-rotate(344deg) brightness(98%) contrast(102%);
+      cursor: $cursorPointRightRed;
+      filter: $fitlerRed;
       transition: margin-top 0.3s;
       margin-top: -20px;
     }
@@ -56,9 +56,9 @@
   p {
     font-size: 16px;
     font-weight: 500;    
-    cursor: url("../../assets/img/cursor/Cursor-pointer-red.png") 17 17, crosshair;
+    cursor: $cursorPointRightRed;
     &:hover {
-      color: #9a031e;
+      color: $red;
     }
   }
 }
@@ -92,11 +92,11 @@
   width: 17px;
   height: 17px;
   border-radius: 50%;
-  border: 1px solid #f4f4f4;
-  background-color: #090a0a;
+  border: 1px solid $white;
+  background-color: $black;
   p {
     background-color: transparent;
-    color: #f4f4f4;
+    color: $white;
     font-size: 15px;
     font-weight: 500;
   }

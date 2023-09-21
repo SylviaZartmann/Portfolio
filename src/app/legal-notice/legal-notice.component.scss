@@ -1,3 +1,5 @@
+@import "/src/variables.scss";
+
 .ln-background {
   width: 100vw;
   display: grid;
@@ -29,11 +31,11 @@
         font-size: 21px;
     }
     a {
-        color: #9a031e;
+        color: $red;
         text-decoration: none;
         &:hover {
         text-decoration: underline;
-        cursor: url("../../assets/img/cursor/Cursor-emptylogo-red.png")17 17,  auto;
+        cursor: $cursorCircleRed;
         }
     }
     &:last-child {

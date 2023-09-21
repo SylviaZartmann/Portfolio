@@ -1,3 +1,5 @@
+@import "/src/variables.scss";
+
 .landing-content {
   width: 100%;
   max-width: 1240px;
@@ -17,23 +19,24 @@
 }
 
 .stroke-name {
-  cursor: url("../../assets/img/cursor/Cursor-emptylogo-red.png") 17 17, none;
+  cursor: $cursorCircleRed;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   padding-bottom: 35px;
+  color: $red;
 }
 
 .stroke {
   width: 577px;
   height: 3px;
-  background-color: #090a0a;
+  background-color: $black;
 }
 
 .landing-name {
   text-wrap: nowrap;
-  font-family: "genos", sans-serif;
+  font-family: $genos;
   font-size: 42px;
   font-style: normal;
   font-weight: 700;
@@ -48,7 +51,7 @@
   align-items: flex-end;
   width: -webkit-fill-available;
   p {
-    cursor: url("../../assets/img/cursor/Cursor-emptylogo-red.png") 17 17, auto;
+    cursor: $cursorCircleRed;
     writing-mode: vertical-rl;
   }
 }
@@ -61,7 +64,8 @@
   margin-right: -20px;
   gap: 10px;
   p {
-    cursor: url("../../assets/img/cursor/Cursor-logo-red.png") 17 17, auto;
+
+    cursor: $cursorLogoRed;
     text-align: center;
     writing-mode: unset;
   }
@@ -75,8 +79,7 @@
       top: -100%;
       width: 90px;
       height: 160px;
-      filter: invert(2%) sepia(4%) saturate(1127%) hue-rotate(131deg)
-        brightness(97%) contrast(97%);
+      filter: $filterBlack;
       animation: arrowDown 2s infinite;
       animation-delay: 7s;
     }

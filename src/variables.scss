@@ -1,0 +1,25 @@
+$black: #090a0a;
+$filterBlack: invert(2%) sepia(4%) saturate(1127%) hue-rotate(131deg)
+  brightness(97%) contrast(97%);
+
+$white: #f4f4f4;
+$filterWhite: invert(100%) sepia(44%) saturate(28%) hue-rotate(0deg)
+  brightness(111%) contrast(91%);
+
+$red: #9a031e;
+$fitlerRed: invert(8%) sepia(75%) saturate(6406%) hue-rotate(344deg)
+  brightness(98%) contrast(102%);
+
+$grayLight: #dbdbdb;
+$filterGrayLight: invert(56%) sepia(6%) saturate(139%) hue-rotate(131deg)
+  brightness(85%) contrast(79%);
+
+$grayDark: #7a7d7d;
+
+$genos: "genos", sans-serif;
+$tektur: "tektur", sans-serif;
+
+$cursorLogoRed: url("assets/img/cursor/Cursor-logo-red.png") 17 17, auto;
+$cursorCircleRed: url("assets/img/cursor/Cursor-emptylogo-red.png") 17 17, crosshair;
+$cursorPointRightRed: url("assets/img/cursor/Cursor-pointer-red.png") 17 17, auto;
+$cursorPointLeftRed: url("assets/img/cursor/Cursor-default-red.png") 17 17, auto;

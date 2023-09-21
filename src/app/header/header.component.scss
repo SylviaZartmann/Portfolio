@@ -1,8 +1,10 @@
+@import "/src/variables.scss";
+
 .header-background {
   position: fixed;
   z-index: 5;
   height: fit-content;
-  background-color: #f4f4f4;
+  background-color: $white;
   width: 100vw;
   top: 0;
   left: 0;
@@ -20,11 +22,9 @@
   img {
     height: 70px;
     width: 70px;
-    filter: invert(2%) sepia(4%) saturate(1127%) hue-rotate(131deg)
-      brightness(97%) contrast(97%);
+    filter: $filterBlack;
     &:hover {
-      cursor: url("../../assets/img/cursor/Cursor-emptylogo-red.png") 17 17,
-        crosshair;
+      cursor: $cursorCircleRed;
     }
   }
 }
@@ -35,7 +35,7 @@
   position: relative;
   .border {
     width: 100%;
-    border-block-end: 4px solid #090a0a;
+    border-block-end: 4px solid $black;
   }
   :nth-child(1) {
     position: absolute;
@@ -51,8 +51,7 @@
     top: 90%;
   }
   &:hover {
-    cursor: url("../../assets/img/cursor/Cursor-emptylogo-red.png") 17 17,
-      crosshair;
+    cursor: $cursorCircleRed;
   }
 }
 .animation {
