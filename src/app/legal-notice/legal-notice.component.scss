@@ -6,20 +6,47 @@
   .ln-content {
     justify-self: center;
     width: 100%;
-    max-width: 1240px;
     margin: 200px 100px -50px 100px;
     display: flex;
     flex-direction: column;
     gap: 50px;
+    max-width: $screenWidth1;
+    @media (max-width: $step1Respo) {
+      max-width: $screenWidth2;
+    }
+    @media (max-width: $step2Respo) {
+    margin: 200px 0 -50px 0;
+      max-width: $screenWidth3;
+      padding: 10px 0;
+    }
+    @media (max-width: $step3Respo) {
+      max-width: $screenWidth4;
+    }
+    @media (max-width: $step4Respo) {
+      max-width: $screenWidth5;
+    }
 
     h2 {
       font-size: 60px;
+      text-align: start;
+      text-wrap:pretty;
+      @media (max-width: $step3Respo) {
+        font-size: 40px;
+      }
     }
     h3 {
       font-size: 35px;
+      text-align: start;
+      @media (max-width: $step3Respo) {
+        font-size: 30px;
+      }
     }
     p {
-      font-weight: 400;
+      font-weight: 400;     
+      @media (max-width: $step3Respo) {
+        text-align: start;
+        font-size: 18px;
+      }
     }
     strong {
         font-weight: 600;
@@ -29,6 +56,9 @@
         line-height: 100%;
         margin: 0;
         font-size: 21px;
+        @media (max-width: $step3Respo) {
+          font-size: 18px;
+        }
     }
     a {
         color: $red;
