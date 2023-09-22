@@ -11,22 +11,50 @@
 .projects-content {
     width: 100vw;
     height: max-content;
-    max-width: 1240px;
     margin: 0 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     margin-bottom: 120px;
+    max-width: $screenWidth1;
+    @media (max-width: $step1Respo) {
+      max-width: $screenWidth2;
+    }
+    @media (max-width: $step2Respo) {
+      max-width: $screenWidth3;
+    }
+    @media (max-width: $step3Respo) {
+      max-width: $screenWidth4;
+    }
+    @media (max-width: $step4Respo) {
+      max-width: $screenWidth5;
+    }
     h4  {
         margin-top: -20px;
         padding-bottom: 20px;
+        @media (max-width: $step1Respo) {
+          font-size: 28px;
+        }
+        @media (max-width: $step2Respo) {
+            margin-top: 3px;
+            font-size: 25px;
+        }
+        @media (max-width: $step3Respo) {
+            margin-top: 2px;
+            font-size: 23px;
+        }
+        @media (max-width: $step4Respo) {
+            margin-top: 2px;
+            font-size: 21px;
+        }
+
     }
     p {
         text-align: center;
-        margin-bottom: 20px;
     }
     a {
+        margin-top: 20px;
         margin-bottom: 80px;
     }
 }

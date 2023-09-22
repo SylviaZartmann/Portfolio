@@ -16,17 +16,19 @@
   position: relative;
   max-width: $screenWidth1;
   @media (max-width: $step1Respo) {
-    width: $screenWidth2;
+    max-width: $screenWidth2;
   }
   @media (max-width: $step2Respo) {
-    width: $screenWidth3;
-    padding: 10px 0;
+    max-width: $screenWidth3;
+    margin-top: 50px;
   }
   @media (max-width: $step3Respo) {
-    width: $screenWidth4;
+    max-width: $screenWidth4;
+    margin-top: 100px;
   }
   @media (max-width: $step4Respo) {
-    width: $screenWidth5;
+    max-width: $screenWidth5;
+    margin-top: 80px;
   }
   h2 {
     justify-self: center;
@@ -34,6 +36,15 @@
     padding: 0 13px;
     background-color: $white;
     z-index: 1;
+    @media (max-width: $step1Respo) {
+      margin-bottom: -50px;
+    }
+    @media (max-width: $step2Respo) {
+      margin-bottom: -35px;
+    }
+    @media (max-width: $step3Respo) {
+      margin-bottom: -30px;
+    }
   }
 }
 
@@ -44,6 +55,13 @@
   justify-content: center;
   gap: 50px;
   flex-wrap: wrap;
+  
+  @media (max-width: $step2Respo) {
+    gap: 30px;
+  }
+  @media (max-width: $step3Respo) {
+    gap: 20px;
+  }
 
   .skills {
     display: flex;
@@ -53,8 +71,21 @@
     gap: 20px;
     padding: 0;
     cursor: $cursorCircleRed;
+    
+    @media (max-width: $step2Respo) {
+      gap: 10px;
+    }
     img {
       height: 75px;
+      @media (max-width: $step1Respo) {
+        height: 65px;
+      }
+      @media (max-width: $step3Respo) {
+        height: 60px;
+      }
+      @media (max-width: $step4Respo) {
+        height: 55px;
+      }
       &:hover {
         animation: skillhover 5s infinite;
       }
@@ -62,6 +93,12 @@
 
     p {
       text-align: center;
+      @media (max-width: $step2Respo) {
+        font-size: 18px;
+      }
+      @media (max-width: $step4Respo) {
+        font-size: 14px;
+      }
     }
   }
 }
@@ -72,10 +109,21 @@
   justify-content: center;
   align-items: center;
   border: 5px solid $black;
-  gap: 70px;
   padding: 130px 150px 100px 150px;
   width: min-content;
   width: -webkit-fill-available;
+  @media (max-width: $step1Respo) {
+    padding: 110px 90px 100px 70px;
+  }
+  @media (max-width: $step2Respo) {
+    padding: 90px 50px 70px 50px;
+  }
+  @media (max-width: $step3Respo) {
+    padding: 60px 30px 40px 30px;
+  }
+  @media (max-width: $step4Respo) {
+    padding: 50px 30px 30px 30px;
+  }
 }
 .arrow_right_anim {
   transition: transform 0.5s ease;

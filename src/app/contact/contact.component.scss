@@ -12,12 +12,34 @@
   ); // (unten links), (oben links), (oben rechts), (unten rechts)
   display: flex;
   justify-content: center;
+  @media (max-width: $step3Respo) {
+    clip-path: polygon(
+    0 100%,
+    0 0,
+    100% 10%,
+    100% 100%
+  );
+  }
+  @media (max-width: $step4Respo) {
+  }
 }
 
 .contact-content {
-  width: 1240px;
   border: 2px solid $black;
-  margin-top: -50px;
+  margin-top: -50px;  
+  width: $screenWidth1;
+  @media (max-width: $step1Respo) {
+    width: $screenWidth2;
+  }
+  @media (max-width: $step2Respo) {
+    width: $screenWidth3;
+  }
+  @media (max-width: $step3Respo) {
+    width: $screenWidth4;
+  }
+  @media (max-width: $step4Respo) {
+    width: $screenWidth5;
+  }
 }
 
 .contact-form {
@@ -26,6 +48,10 @@
     padding-top: 180px;
     background-color: $black;
     color: $white;
+    
+  @media (max-width: $step2Respo) {
+    text-align: start;
+  }
   }
 }
 
@@ -39,6 +65,21 @@
   p {
     background-color: $black;
     color: $white;
+    @media (max-width: $step3Respo) {
+      text-align: center;
+    }
+    @media (max-width: $step4Respo) {
+      text-align: center;
+    }
+  }
+  h4 {
+    @media (max-width: $step3Respo) {
+      text-align: center;
+    }
+    @media (max-width: $step4Respo) {
+      font-size: 26px;
+      text-align: center;
+    }
   }
 }
 
@@ -47,6 +88,18 @@ form {
   display: grid;
   gap: 20px;
   margin: 50px 0;
+  @media (max-width: $step1Respo) {
+    width: 60%;
+  }
+  @media (max-width: $step2Respo) {
+    width: $screenWidth3;
+  }
+  @media (max-width: $step3Respo) {
+    width: $screenWidth4;
+  }
+  @media (max-width: $step4Respo) {
+    width: $screenWidth5;
+  }
   &:focus-within {
     p {
       color: transparent !important;

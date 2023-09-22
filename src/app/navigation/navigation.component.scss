@@ -13,11 +13,24 @@
     align-items: center;
     margin-top: 100px;
     gap: 50px;
+    width: 100%;
+    max-width: $screenWidth1;
+    @media (max-width: $step1Respo) {
+      max-width: $screenWidth2;
+    }
+    @media (max-width: $step2Respo) {
+      max-width: $screenWidth3;
+    }
+    @media (max-width: $step3Respo) {
+      max-width: $screenWidth4;
+    }
+    @media (max-width: $step4Respo) {
+      max-width: $screenWidth5;
+    }
     .border-box {
       position: relative;
       display: flex;
       justify-content: center;
-      width: 100%;
       .borderleft {
         position: absolute;
         top: 70%;
@@ -84,14 +97,16 @@
       text-align: center;
       height: fit-content;
       padding: 0 50px;
+      @media (max-width: $step4Respo) {
+        padding: 0 15px;
+      }    
       &:hover {
         color: $black !important;
       }
     }
   }
   .wrap {
-    width: 100%;
-    max-width: 1240px;
+    width: $screenWidth1 ;
     justify-self: center;
     align-self: flex-end;
     display: flex;
@@ -100,6 +115,19 @@
     height: 150px;
     z-index: 2;
     margin-bottom: 30px;
+    @media (max-width: $step1Respo) {
+      width: $screenWidth2;
+    }
+    @media (max-width: $step2Respo) {
+      width: $screenWidth3;
+    }
+    @media (max-width: $step3Respo) {
+      width: $screenWidth4;
+    }
+    @media (max-width: $step4Respo) {
+      width: $screenWidth5;
+    }    
+
     .left {
       display: flex;
       gap: 10px;
@@ -107,11 +135,24 @@
         height: 40px;
         filter: $filterWhite;
       }
+      @media (max-width: $step4Respo) {
+        margin-left: -105px;
+      }  
+
+    }
+    .right {
+            @media (max-width: $step3Respo) {
+        align-self: flex-start;
+      }
     }
     h2,
     p {
       color: $white;
       background-color: $black;
+      text-align: start;
+      @media (max-width: $step4Respo) {
+        background-color: transparent;
+      }  
     }
   }
 }
