@@ -1,70 +1,71 @@
 <div class="sample-content">
-  <div class="samplepic">
-    <div>
-      <div class="sampletext">
-        <h3>Join</h3>
-        <h4> JavaScript | HTML | CSS</h4>
-        <p>Ein Aufgabenbearbeitungssystem inspiriert durch das "Kanban System".
-          Erstelle und organisiere Aufgaben mit Drag&Drop Funktion, füge Kontakte und
-          Kategorien zu einer Aufgabe hinzu.
-        </p>
-        <a target="_blank" href="https://github.com/SylviaZartmann/Join-Single">
-          <div class="button">Github</div>
-        </a>
-      </div>
 
+  <div #elementRef1 class="sample-pic-text">
 
+    <div #elementRef1 [@slideInOut]="inView ? 'start' : 'end'" class="sampletext">
+      <h3>Join</h3>
+      <h4> JavaScript | HTML | CSS</h4>
+      <p>Ein Aufgabenbearbeitungssystem inspiriert durch das "Kanban System".
+        Erstelle und organisiere Aufgaben mit Drag&Drop Funktion, füge Kontakte und
+        Kategorien zu einer Aufgabe hinzu.
+      </p>
+      <a target="_blank" href="https://github.com/SylviaZartmann/Join-Single">
+        <div class="button">Github</div>
+      </a>
+    </div>
+
+    <div class="samplepic">
       <img style="border: 0.5px solid #bdbdbd;" src="assets/img/sample-join.png" alt="">
-
       <div class="samplepic-border">
         <a target="_blank" href="https://sylvia-zartmann.developerakademie.net/Join/login.html">
           <img src="assets/img/playbutton.svg" alt="">
         </a>
       </div>
     </div>
+
     <div class="samplecounter">01 | 03</div>
   </div>
 
 
-  <div class="samplepic-reverse">
-    <div>
-      <div class="sampletext">
-        <h3>El Pollo Loco</h3>
-        <h4> JavaScript | HTML | CSS</h4>
-        <p>Ein Jump'n'Run Spiel programmiert mit Objektorientierung im HTML Canvas. <br>
-          Töte die Hühner, versorge die Küken und gib Acht vor El Pollo Loco.
-          Im Browser und mobil spielbar.
-        </p>
-        <a target="_blank" href="https://github.com/SylviaZartmann/ElPolloLoco">
-          <div class="button">Github</div>
-        </a>
-      </div>
 
+  <div class="sample-pic-text reverse">
+    <div #elementRef2 [@slideInOutreverse]="isSlided ? 'start' : 'end'" class="sampletext">
+      <h3>El Pollo Loco</h3>
+      <h4> JavaScript | HTML | CSS</h4>
+      <p>Ein Jump'n'Run Spiel programmiert mit Objektorientierung im HTML Canvas. <br>
+        Töte die Hühner, versorge die Küken und gib Acht vor El Pollo Loco.
+        Im Browser und mobil spielbar.
+      </p>
+      <a target="_blank" href="https://github.com/SylviaZartmann/ElPolloLoco">
+        <div class="button">Github</div>
+      </a>
+    </div>
+    <div class="samplepic">
       <img src="assets/img/sample-epl.png" alt="">
       <div class="samplepic-border">
         <a target="_blank" href="https://sylvia-zartmann.developerakademie.net/15_ElPolloLoco/index.html">
           <img src="assets/img/playbutton.svg" alt="">
         </a>
-        
+
       </div>
     </div>
 
     <div class="samplecounter">02 | 03</div>
   </div>
 
-  <div class="samplepic">
-    <div>
-      <div class="sampletext">
-        <h3>CRM</h3>
-        <h4> Angular | Firebase | Typescript | HTML | SCSS</h4>
-        <p>Ein einfaches CRM System zur Verwaltung von Kunden und Bestellungen. <br>
-          Optimiert für den Gebrauch kleiner Pensionen mit angeschlossenem Vertrieb.
-        </p>
-        <a target="_blank" href="#">
-          <div class="button">Github</div>
-        </a>
-      </div>
 
+  <div class="sample-pic-text">
+    <div #elementRef3 [@slideInOut]="isSlided ? 'start' : 'end'" class="sampletext">
+      <h3>CRM</h3>
+      <h4> Angular | Firebase | Typescript | HTML | SCSS</h4>
+      <p>Ein einfaches CRM System zur Verwaltung von Kunden und Bestellungen. <br>
+        Optimiert für den Gebrauch kleiner Pensionen mit angeschlossenem Vertrieb.
+      </p>
+      <a target="_blank" href="#">
+        <div class="button">Github</div>
+      </a>
+    </div>
+    <div class="samplepic">
       <img src="assets/img/codingsample.jpg" alt="">
       <div class="samplepic-border">
         <a href="#" target="_blank">
