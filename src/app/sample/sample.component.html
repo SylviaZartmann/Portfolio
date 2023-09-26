@@ -1,8 +1,8 @@
 <div class="sample-content">
 
-  <div #elementRef1 class="sample-pic-text">
+  <div #elementRef1 id="elementRef1" class="sample-pic-text">
 
-    <div #elementRef1 [@slideInOut]="inView ? 'start' : 'end'" class="sampletext">
+    <div  [@slideInOut]="showText1 ? 'end' : 'start'" class="sampletext">
       <h3>Join</h3>
       <h4> JavaScript | HTML | CSS</h4>
       <p>Ein Aufgabenbearbeitungssystem inspiriert durch das "Kanban System".
@@ -28,8 +28,8 @@
 
 
 
-  <div class="sample-pic-text reverse">
-    <div #elementRef2 [@slideInOutreverse]="isSlided ? 'start' : 'end'" class="sampletext">
+  <div #elementRef2 id="elementRef2" class="sample-pic-text reverse">
+    <div [@slideInOutreverse]="showText1 ? 'start' : 'end'" class="sampletext">
       <h3>El Pollo Loco</h3>
       <h4> JavaScript | HTML | CSS</h4>
       <p>Ein Jump'n'Run Spiel programmiert mit Objektorientierung im HTML Canvas. <br>
@@ -54,8 +54,8 @@
   </div>
 
 
-  <div class="sample-pic-text">
-    <div #elementRef3 [@slideInOut]="isSlided ? 'start' : 'end'" class="sampletext">
+  <div #elementRef3 id="elementRef3" class="sample-pic-text">
+    <div [@slideInOut]="showText1 ? 'end' : 'start'" class="sampletext">
       <h3>CRM</h3>
       <h4> Angular | Firebase | Typescript | HTML | SCSS</h4>
       <p>Ein einfaches CRM System zur Verwaltung von Kunden und Bestellungen. <br>
