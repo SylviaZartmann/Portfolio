@@ -57,7 +57,7 @@ const playbutton = trigger('playbutton', [
   state(
     'start',
     style({
-      display: 'flex',
+      opacity: '1',
       filter: 'grayscale(0)'
     })
   ),
@@ -115,21 +115,6 @@ export class SampleComponent implements OnInit {
         entry.target.getAttribute('id') == 'elementRef3'
           ? entry.isIntersecting
           : this.showText3;
-      this.whichVariable(entry.target.getAttribute('id'));
     });
-  }
-
-  whichVariable(id: any) {
-    if (
-      (window.innerWidth >= 1000 && id == 'elementRef1') ||
-      id == 'elementRef3'
-    ) {
-      this.animation = '[@slideRight]';
-    }
-    if (window.innerWidth >= 1000 && id == 'elementRef2') {
-      this.animation = '[@slideLeft]';
-    } else {
-      this.animation = '[@slideDown]';
-    }
   }
 }

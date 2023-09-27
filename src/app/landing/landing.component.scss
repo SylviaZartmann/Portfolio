@@ -2,23 +2,26 @@
 
 .landing-content {
   width: 100%;
+  height: 100vh;
   margin: 0 100px;
-  display: flex;
+  display: grid;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
   max-width: $screenWidth1;
   @media (max-width: $step1Respo) {
-    width: $screenWidth2;
+    max-width: $screenWidth2;
   }
   @media (max-width: $step2Respo) {
-    width: $screenWidth3;
+    max-width: $screenWidth3;
   }
   @media (max-width: $step3Respo) {
-    width: $screenWidth4;
+    max-width: $screenWidth4;
   }
   @media (max-width: $step4Respo) {
-    width: $screenWidth5;
+    max-width: $screenWidth5;
+  }
+  .helper {
+    align-self: center;
   }
   h1 {
     text-align: center;
@@ -26,7 +29,6 @@
     line-height: 100%;
     margin: 9% 0 -6.5% 0;
     transform: scaley(0.6);
-    margin-top: 20%;  
     @media (max-width: $step1Respo) {
       font-size: 150px;
     }
@@ -35,7 +37,6 @@
     }
     @media (max-width: $step3Respo) {
       font-size: 80px;
-      margin-top: 0;  
     }
     @media (max-width: $step4Respo) {
       font-size: 60px;
@@ -97,13 +98,28 @@
 }
 
 .scroll-mail {
+  align-self: flex-end;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  width: -webkit-fill-available;
+  width: $screenWidth1;
+  position: absolute;  
+  @media (max-width: $step1Respo) {
+    width: $screenWidth2;
+  }
+  @media (max-width: $step2Respo) {
+    width: $screenWidth3;
+  }
+  @media (max-width: $step3Respo) {
+    width: $screenWidth4;
+  }
+  @media (max-width: $step4Respo) {
+    width: $screenWidth5;
+  }
   p {
     cursor: $cursorCircleRed;
     writing-mode: vertical-rl;
+    padding-top: 5px;
 
   }
 }

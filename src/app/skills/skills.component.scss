@@ -126,16 +126,11 @@
   }
 }
 .arrow_right_anim {
-  transition: transform 0.5s ease;
   display: flex;
   justify-content: flex-start;
   width: 260px;
   height: 260px;
   position: relative;
-  &:hover {
-    transition: transform 0.5s ease;
-    transform: translate(80px, 80px);
-  }
   img {
     position: absolute;
     transform: scaleX(-1);

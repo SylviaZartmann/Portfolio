@@ -18,13 +18,13 @@
       <div routerLink="." fragment="contact" class="button">Let's talk</div>
     </div>
     <div class="display">
-      <div class="display-img">
-        <img src="assets/img/placeholder_me.jpg" alt="">
-        <div class="img-border"></div>
+      <div #elementRef1 id="elementRef1"  class="display-img">
+        <img [@grayscale]="showSomething ? 'start' : 'end'" src="assets/img/placeholder_me.jpg" alt="">
+        <div [@border]="showSomething ? 'start' : 'end'" class="img-border"></div>
       </div>
       
       <div class="arrow_left_anim">
-        <img src="assets/img/arrow_left/Group 3.svg" alt="">
+        <img [@arrow]="showSomething ? 'start' : 'end'" src="assets/img/arrow_left/Group 3.svg" alt="">
       </div>
     </div>
   </div>

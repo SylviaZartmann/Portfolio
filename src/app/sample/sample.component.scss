@@ -22,6 +22,7 @@
     flex-direction: row;
     justify-content: space-between;
     position: relative;
+    overflow-y: hidden;
 
     .sampletext {
       position: absolute;
@@ -148,11 +149,12 @@
             cursor: $cursorPointLeftRed;
             z-index: 2;
             position: absolute;
-            display: none;
+            display: flex;
             top: 20%;
             right: -7%;
             width: 80px;
             height: 80px;
+            opacity: 0;
             @media (max-width: $step2Respo) {
               top: 90%;
               right: 42.5%;
