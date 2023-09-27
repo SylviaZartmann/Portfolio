@@ -19,12 +19,12 @@
     </div>
     <div class="display">
       <div #elementRef1 id="elementRef1"  class="display-img">
-        <img [@grayscale]="showSomething ? 'start' : 'end'" src="assets/img/placeholder_me.jpg" alt="">
-        <div [@border]="showSomething ? 'start' : 'end'" class="img-border"></div>
+        <img [@grayscale]="showSomething1 ? 'start' : 'end'" src="assets/img/placeholder_me.jpg" alt="">
+        <div [@border]="showSomething1 ? 'start' : 'end'" class="img-border"></div>
       </div>
       
-      <div class="arrow_left_anim">
-        <img [@arrow]="showSomething ? 'start' : 'end'" src="assets/img/arrow_left/Group 3.svg" alt="">
+      <div #elementRef2 id="elementRef2"  class="arrow_left_anim">
+        <img [@arrow]="showSomething2 ? 'start' : 'end'" src="assets/img/arrow_left/Group 3.svg" alt="">
       </div>
     </div>
   </div>

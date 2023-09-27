@@ -22,11 +22,12 @@
     flex-direction: row;
     justify-content: space-between;
     position: relative;
-    overflow-y: hidden;
+    height: 110%;
+    overflow: hidden;
 
     .sampletext {
       position: absolute;
-      bottom: 5%;
+      bottom: 12%;
       right: 50%;
       z-index: 0;
       width: 550px;
