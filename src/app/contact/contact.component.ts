@@ -13,6 +13,7 @@ export class ContactComponent {
     message: ['', Validators.required],
   });
   isSubmitted = false;
+  sendData=false;
 
   constructor(private fb: FormBuilder ) {}
 
@@ -24,10 +25,21 @@ export class ContactComponent {
       this.FormData.controls.email.valid &&
       this.FormData.controls.message.valid
     ) {
+      this.sendData = true;
       this.sendMail();
-      this.FormData.reset();
-      this.isSubmitted = false;
+      setTimeout(() => {
+        this.FormData.reset();
+        this.isSubmitted = false;
+      }, 2000);
     }
+  }
+
+  workedOutWell() {
+    return (
+      this.FormData.controls.name.valid &&
+      this.FormData.controls.email.valid &&
+      this.FormData.controls.message.valid
+    )
   }
 
   async sendMail() {

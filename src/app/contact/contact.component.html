@@ -43,6 +43,7 @@
           
           <span class="error" *ngIf="validateErrorText('message')">Valide Eingabe benötigt!</span>
           <button class="button-reverse">Nachricht senden</button>
+          <span *ngIf="workedOutWell() && sendData">Erfolgreich gesendet!</span>
         </form>
       </div>
     </div>
