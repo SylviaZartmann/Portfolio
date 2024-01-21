@@ -22,6 +22,9 @@
   }
   .helper {
     align-self: center;
+    @media (max-width: $step4Respo) {
+      margin-top: -120px;
+    }
   }
   h1 {
     text-align: center;
@@ -103,7 +106,8 @@
   justify-content: space-between;
   align-items: flex-end;
   width: $screenWidth1;
-  position: absolute;  
+  position: absolute;
+  height: 100dvh;
   @media (max-width: $step1Respo) {
     width: $screenWidth2;
   }

@@ -3,7 +3,8 @@
 .header-background {
   position: fixed;
   z-index: 5;
-  height: fit-content;
+  height: -moz-fit-content; //firefox
+  height: --webkit-fit-content; //safari
   background-color: $white;
   width: 100vw;
   top: 0;
