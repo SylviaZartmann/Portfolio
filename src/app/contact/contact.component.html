@@ -40,7 +40,7 @@
               <img *ngIf="FormData.controls.message.valid && isSubmitted" src="assets/img/input_sign_valid.svg" alt="">
             </span>
           </div>
-          
+
           <span class="error" *ngIf="validateErrorText('message')">Valide Eingabe benötigt!</span>
           <button class="button-reverse">Nachricht senden</button>
           <span *ngIf="workedOutWell() && sendData">Erfolgreich gesendet!</span>

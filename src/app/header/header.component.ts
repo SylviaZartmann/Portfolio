@@ -21,11 +21,13 @@ export class HeaderComponent implements OnDestroy {
       this.playAnimation = !this.playAnimation;
     });
   }
+
   toggleAnimation() {
     this.freshLoad = false;
     this.playAnimation = !this.playAnimation;
     if (!this.playAnimation) this.router.navigate(['/']);
   }
+
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
