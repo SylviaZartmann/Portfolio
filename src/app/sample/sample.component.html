@@ -65,15 +65,11 @@
 
     <div [@slideRight]="showText3 ? 'start' : 'end'" class="sampletext">
       <h3>wirdehnix</h3>
-      <h4> Angular | Typescript | HTML | SCSS</h4>
-      <h4> Python | Django | Google Cloud </h4>
-      <p>Ein Netflix-Klon zur Wiedergabe serverseitig bereitgestellter Inhalte.
-        Einschließlich eines vollumfänglichen Logins.
+      <h4> Python | Django | Django Rest Framework </h4>
+      <p>Das Backend für einen Netflix-Klon zur Wiedergabe serverseitig bereitgestellter Inhalte.
+        Einschließlich einer vollumfänglichen Datenverarbeitung zur Konvertierung und zum Login.
       </p>
       <div style="display:flex; flex-direction:column; text-wrap: nowrap; gap: 20px">
-        <a target="_blank" href="https://github.com/SylviaZartmann/wirdehnix_FE">
-          <div class="button">GitHub Frontend</div>
-        </a>
         <a target="_blank" href="https://github.com/SylviaZartmann/wirdehnix_BE">
           <div class="button">GitHub Backend</div>
         </a>
@@ -85,11 +81,7 @@
     <div class="samplepic">
       <img #elementRef3 id="elementRef3" [@grayscale]="showText3 ? 'start' : 'end'" src="assets/img/sample-wirdehnix.PNG"
         alt="">
-      <div [@border]="showText3 ? 'start' : 'end'" class="samplepic-border">
-        <a href="https://wirdehnix.sylviazartmann.de" target="_blank">
-          <img [@playbutton]="showText3 ? 'start' : 'end'" src="assets/img/playbutton.svg" alt="">
-        </a>
-      </div>
+      <div [@border]="showText3 ? 'start' : 'end'" class="samplepic-border"></div>
     </div>
 
     <div class="samplecounter">03 | 03</div>
