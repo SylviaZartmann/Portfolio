@@ -109,7 +109,7 @@ p {
     transition: padding 0.3s, font-weight 0.3s;
     padding: 10px 70px;
     font-weight: 800;
-    cursor: $cursorLogoRed;
+    cursor: $cursorPointLeftRed;
   }
 }
 
@@ -126,6 +126,8 @@ p {
   color: $white;
   font-weight: 500;
 }
+
+
 
 .background {
   width: 100vw;

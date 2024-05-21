@@ -48,82 +48,108 @@
   }
 }
 
-.design {
-  width: -webkit-fill-available;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
-  
-  @media (max-width: $step2Respo) {
-    gap: 30px;
-  }
-  @media (max-width: $step3Respo) {
-    gap: 20px;
-  }
 
-  .skills {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 0;
-    cursor: $cursorCircleRed;
-    
-    @media (max-width: $step2Respo) {
-      gap: 10px;
-    }
-    img {
-      height: 75px;
-      @media (max-width: $step1Respo) {
-        height: 65px;
-      }
-      @media (max-width: $step3Respo) {
-        height: 60px;
-      }
-      @media (max-width: $step4Respo) {
-        height: 55px;
-      }
-      &:hover {
-        animation: skillhover 5s infinite;
-      }
-    }
-
-    p {
-      text-align: center;
-      @media (max-width: $step2Respo) {
-        font-size: 18px;
-      }
-      @media (max-width: $step4Respo) {
-        font-size: 14px;
-      }
-    }
-  }
-}
 
 .skill-border {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
   border: 5px solid $black;
-  padding: 130px 150px 100px 150px;
+  padding: 40px 150px 100px 150px;
   width: min-content;
   width: -webkit-fill-available;
   @media (max-width: $step1Respo) {
-    padding: 110px 90px 100px 70px;
+    padding: 30px 90px 100px 70px;
   }
   @media (max-width: $step2Respo) {
-    padding: 90px 50px 70px 50px;
+    padding: 20px 50px 70px 50px;
   }
   @media (max-width: $step3Respo) {
-    padding: 60px 30px 40px 30px;
+    padding: 10px 30px 40px 30px;
   }
   @media (max-width: $step4Respo) {
-    padding: 50px 30px 30px 30px;
+    padding: 10px 30px 30px 30px;
   }
+  .category_buttons {
+    display: flex;
+    justify-self: center;
+    gap: 10px;
+    .button_skill {
+      transition: padding 0.3s, font-weight 0.3s;
+      display: inline-flex;
+      padding: 5px 20px;
+      justify-content: center;
+      align-items: center;
+      font-family: $genos;
+      font-size: 21px;
+      letter-spacing: 0.7px;
+      line-height: 100%;
+      border: 3px solid $black;
+      background-color: $white;
+      color: $black;
+      font-weight: 600;
+      text-wrap: nowrap;
+      &:hover{
+        background-color: $black;
+        color: $white;
+        cursor: $cursorPointLeftRed;
+      }
+    }
+  }
+
+  .design {
+    width: -webkit-fill-available;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+
+    @media (max-width: $step2Respo) {
+      gap: 30px;
+    }
+    @media (max-width: $step3Respo) {
+      gap: 20px;
+    }
+
+    .skills {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 0;
+      cursor: $cursorCircleRed;
+
+      @media (max-width: $step2Respo) {
+        gap: 10px;
+      }
+      img {
+        height: 75px;
+        @media (max-width: $step1Respo) {
+          height: 65px;
+        }
+        @media (max-width: $step3Respo) {
+          height: 60px;
+        }
+        @media (max-width: $step4Respo) {
+          height: 55px;
+        }
+        &:hover {
+          animation: skillhover 5s infinite;
+        }
+      }
+
+      p {
+        text-align: center;
+        @media (max-width: $step2Respo) {
+          font-size: 18px;
+        }
+        @media (max-width: $step4Respo) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
 }
 .arrow_right_anim {
   display: flex;
@@ -144,7 +170,7 @@
   0% {
     filter: $fitlerRed;
   }
-    
+
   20% {
     filter: $fitlerRed;
     transform: rotate(360deg);

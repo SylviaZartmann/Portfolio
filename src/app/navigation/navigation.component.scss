@@ -99,7 +99,7 @@
       padding: 0 50px;
       @media (max-width: $step4Respo) {
         padding: 0 15px;
-      }    
+      }
       &:hover {
         color: $black !important;
       }
@@ -126,7 +126,7 @@
     }
     @media (max-width: $step4Respo) {
       width: $screenWidth5;
-    }    
+    }
 
     .left {
       display: flex;
@@ -137,12 +137,15 @@
       }
       @media (max-width: $step4Respo) {
         margin-left: -105px;
-      }  
+      }
 
     }
     .right {
             @media (max-width: $step3Respo) {
         align-self: flex-start;
+      }
+      a {
+        text-decoration: none;
       }
     }
     h2,
@@ -152,7 +155,7 @@
       text-align: start;
       @media (max-width: $step4Respo) {
         background-color: transparent;
-      }  
+      }
     }
   }
 }
